@@ -4,7 +4,7 @@ import ExampleNav from './ExampleNav.jsx'
 const navs = {
   Navbar: [
     'ExampleNav'
-  ],
+  ]
 }
 
 class ExampleNavContainer extends Component {
