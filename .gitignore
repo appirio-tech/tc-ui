@@ -1,0 +1,9 @@
+# Build files
+.tmp
+node_modules
+coverage
+.sass-cache
+.idea
+.env
+npm-debug.log
+.DS_Store

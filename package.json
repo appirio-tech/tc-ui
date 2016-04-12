@@ -1,0 +1,40 @@
+{
+  "name": "appirio-tech-ui-kit",
+  "version": "0.0.0",
+  "main": "./index.coffee",
+  "devDependencies": {
+    "appirio-tech-webpack-config": "0.x.x",
+    "eslint": "^2.3.0",
+    "eslint-plugin-react": "^4.2.0",
+    "babel-core": "^6.6.5",
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "cross-env": "^1.0.7",
+    "history": "^1.17.0",
+    "ignore-styles": "^1.2.0",
+    "mocha": "^2.4.5",
+    "npm-prepublish": "^1.2.1",
+    "react-router": "^1.0.3"
+  },
+  "scripts": {
+    "example": "webpack-dev-server -d --progress --inline --colors",
+    "dev": "webpack-dev-server -d --progress --inline --colors --dev",
+    "clean": "rm -r dist",
+    "build": "webpack --config webpack.config.js; cp example/index.html dist/",
+    "lint": "eslint --format table --ext .js,.jsx .",
+    "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --require ignore-styles --recursive \"./components/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "lodash": "^4.0.0",
+    "moment": "^2.11.2",
+    "react": "^0.14.7",
+    "react-datetime": "^2.0.2",
+    "react-dom": "^0.14.7",
+    "react-dropzone": "^3.3.2",
+    "redux": "^3.3.1",
+    "react-redux": "^4.2.1",
+    "react-select": "^0.9.1"
+  }
+}
