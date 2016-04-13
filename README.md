@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=master)](https://travis-ci.org/appirio-tech/tc-ui)
+#### Dev [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=dev)](https://travis-ci.org/appirio-tech/tc-ui) QA [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=qa)](https://travis-ci.org/appirio-tech/tc-ui) Master [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=master)](https://travis-ci.org/appirio-tech/tc-ui)
 
-# tc-ui
-Topcoder UI Kit
+# Topcoder UI Kit
 
+This repo houses Topcoder's style guide and component library. Design documentation and information on the style guide principles can be found at https://app.frontify.com/d/zEXqGHFD1YN2/ui-library.
+
+The technologies used are React, Redux, ES2015, Webpack, and SCSS.
 
 ## Installation
 
@@ -107,10 +109,10 @@ SCSS Files
 - Follow the instructions under [Get Emmet working](http://www.nitinh.com/2015/02/setting-sublime-text-react-jsx-development/)
   - **Note:** Add the last snippet of code to `reg_replace.sublime-settings` by navigating to  `Sublime Text -> Preferences -> Package Settings -> Reg Replace -> Settings-User`
 
-## Using the react-components repository in your app
+## Using the tc-ui repository in your app
 
 ## Install
 
 ```
-npm install appirio-tech-tc-ui
+npm install tc-ui
 ```
