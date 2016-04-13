@@ -2,6 +2,9 @@
 
 # Topcoder UI Kit
 
+Victor to insert here
+
+The technologies used are React, Redux, ES2015, Webpack, and SCSS.
 
 ## Installation
 
