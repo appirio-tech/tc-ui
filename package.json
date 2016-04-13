@@ -1,6 +1,6 @@
 {
   "name": "tc-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.js",
   "devDependencies": {
     "appirio-tech-webpack-config": "0.x.x",
