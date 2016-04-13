@@ -2,7 +2,7 @@
 
 # Topcoder UI Kit
 
-Victor to insert here
+The Topcoder style guide and design documentation are maintained at https://app.frontify.com/d/zEXqGHFD1YN2/ui-library
 
 The technologies used are React, Redux, ES2015, Webpack, and SCSS.
 
