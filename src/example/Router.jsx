@@ -2,7 +2,7 @@ import React                         from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import ExampleApp                    from './ExampleApp.jsx'
-import ExampleComponentExample       from '../components/ExampleComponentExample.jsx'
+import ExampleComponentExample       from '../components/ExampleComponent/ExampleComponentExample.jsx'
 
 const Component = () => (
     <Router history={browserHistory}>
