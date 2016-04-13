@@ -1,6 +1,6 @@
 #### Dev [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=dev)](https://travis-ci.org/appirio-tech/tc-ui) QA [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=qa)](https://travis-ci.org/appirio-tech/tc-ui) Master [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=master)](https://travis-ci.org/appirio-tech/tc-ui)
 
-# Topcoder UI Components and Styles
+# Topcoder UI Kit
 
 
 ## Installation
