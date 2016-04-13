@@ -1,7 +1,7 @@
 {
-  "name": "appirio-tech-ui-kit",
+  "name": "tc-ui",
   "version": "0.0.1",
-  "main": "./index.coffee",
+  "main": "./index.js",
   "devDependencies": {
     "appirio-tech-webpack-config": "0.x.x",
     "eslint": "^2.3.0",
