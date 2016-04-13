@@ -1,6 +1,6 @@
 {
   "name": "appirio-tech-ui-kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./index.coffee",
   "devDependencies": {
     "appirio-tech-webpack-config": "0.x.x",
