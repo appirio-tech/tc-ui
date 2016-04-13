@@ -2,7 +2,7 @@
 
 # Topcoder UI Kit
 
-The Topcoder style guide and design documentation are maintained at https://app.frontify.com/d/zEXqGHFD1YN2/ui-library
+This repo houses Topcoder's style guide and component library. Design documentation and information on the style guide principles can be found at https://app.frontify.com/d/zEXqGHFD1YN2/ui-library.
 
 The technologies used are React, Redux, ES2015, Webpack, and SCSS.
 
