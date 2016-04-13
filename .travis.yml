@@ -5,6 +5,7 @@ install:
 - npm install
 script:
 - npm run lint
+- webpack -p --bail --progress --build
 sudo: false
 before_deploy:
 - npm-prepublish --verbose
@@ -45,6 +46,8 @@ deploy:
   on:
     branch: master
 env:
+  matrix:
+  - CXX=g++-4.8
   global:
   # NPM_EMAIL
   - secure: "OQfotwJGzux7avYLA8refzvHev4XsN5J2P8aW0T7Gez1rmIiar7i/ESl5ml+l+g0ouuUkYHJ6YuZK/B/vfcBCiOUq2b7H03A9lSO/SBPTthx62AOAjzn6Jv5LEBIlgAMmH6uDvH1/yU9GcD3tjMIbIeV+5rxTK+H9xD3fBRyniDbgQsselVmNxttOYZ/5i9xBIsoUcXvUjHFo5vYBrGSvMy1Q/F8Ch7WpH9Nb+UzQ+GWzcGtcB3dgaD2knDlF2S0sgey6t+HY2dEjSTyG/+0D/w3K3WFYKcslV6BeaywH0dSzjjw3DEG8nQRvhocbTle9g3n+0dYyzsgqLQ8fOu5/XkFIOamQRJGf7krqzCXWhjXcSHbI5VZZLjy89cE4e3+Xul211FnZeHMT5JnFQ9vGvK2g2BVAz30yxdw/0t6h7BBRpZBh1x/0kmKdVaYhOFbugEGLa6Zi/oBZyF/38WB4RtkEvw3iHU9mMT3Drp7MnGMTU6ewleZP1A3p1Gca7uRO/NaEESvDlMyEjtP6yp44dtYI8s8RcDe9M4fvfhS0AqxLQy3hDHdzNjdIX/yVzMC5vIKHzp9r0oklq/ASDSuUdRPZ7hCvEvD3JTmxody0EuX3CD/PMeowbDb5+3J2bMoET6S1aikPVSTnDIPDzBhOgRQ5Ltp8b7sqR6LqHBBGbA="
@@ -62,3 +65,10 @@ env:
   - secure: "a1eHsDYqGY+4M/fP9M7FfIITPHsthXIctNj7ykF/ul6SmXkp1KLlTSMAghwIgfTGfr1ksYWzfXCQoaRcW+f4Yt6nzEbJLmPTavdudhD8qpQXfdaT7J+5Z+RDZaHATz/daDOtGox6i9yoaIUffO8UN1bqWFweCf09nOAgFJFZ+hiR6p+trZfv+nlsHc7hhTS/YXHQ/zzzRQI2xe4NfvAHGzKZofqP7smWucyOTM0tWj4JjVOQqa8zeAuYT8Y+gwpeUXf5K81i5R2T2CQwUOPV0V8/DMaAXo5fNRxajt+M/pFBPT8+Xr1yLG32/sgAMtJpFg3BXlD0mzjRw9a/W7Vfg2RfxhB/k47qtHLN4FW+w6bQwSq6Te//fbBLRdwwZ8AjhHcdj/iVurq8+Dv5J05HE+G3t9SgyyRa75UO4PSW6W7k+LTTuK0ytoAH1DsB6fuvwx5+JQ1uLQ95zJq184qXJ9dGciqOmvyoeOxcuGuD8cp2NnhyT/xPlmxE85XDAeTX+Ys08Z0c5GacYe+TBiHTxiq3HRiMiyE/Q+s6EuaAsgQyf/pZTYGauZnnYQp7wPsQ+VZeKRFtZJH/HG151SDoR/HCjodnxNx8IXrezTvBnFdltDP/LgbcrMVJ/upfylaBkXAH/DTQgpGoMKIWIc+YIhIDDXSIhtwQJcpefB6FiKM="
   # MASTER_AWS_SECRET
   - secure: "HN5GKJ3kkV64/s0CRtf7/PnFINucU8ApBnMePNu6GXX0MW7jma69jpBcTJpZ3LfNhSDGc8n7zeJddDbEWeApQ/gc8vzo5+kMBDpsXVJg1ktceHNzLFLNOLSOU05Jf/3lCvNJ3tEbb6QXCxeUkklor1Yw/ucdmhTALgyO1Q1wqQNEGVssMUqx8bU2p8ehJ/XsdFVcEed/71huLKJiSOjnO/1u0zeslxicVXU418lBrGIKXe2jbArdQERi3fGA/kb7VSMGUYoSaMHqk21eBo+hdUuGxSvbvg6rA2lzZ+a78gjPc/cGc3wX+7gPtpuS2fOp1zW5b9L2Yy5foHuDPFtdLleIC6/YOytdjcpWIQny490T4aG9c0gK+0pEesBF48AL4facA+Ca4+G7cltKN7HgBZtC2j2LmpSN9QU5HOUOhqE7J37E/uD7vag+9m6U+vSELTxrmYRSnz4/iZJpNr7FRKtnKmF0tLh+Tl+g11jEacIVTddDdvEZb7a/u7B6lAxCs79cA69L32RXAX47hrJv6vEWwNkapDEPDS6nN7TpnGDrAbVxd/fT7cMPSR22FbT9tmFxAbLdc5d7NFlnC7ZZnR5d8Qw7xqYAZbO74i5wNkBQSuRSNkgN+bGZTAf/ps3f7DXg1lQ6K2HUjJKR9wB3PxDwnpn7pVd2Q769nudSV7I="
+
+  addons:
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+      packages:
+        - g++-4.8
