@@ -1,11 +1,7 @@
 // TODO: Add style guide styles and use variables, not custom values
+@import '../../styles/tc-includes';
 
 .example-component-container {
   margin: 20px;
   width: 400px;
-
-  h1 {
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
 }
