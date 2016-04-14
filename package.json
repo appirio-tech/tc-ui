@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --dev --hot --inline --progress",
-    "build": "webpack --bail --progress --build --tc",
+    "build": "webpack --bail --progress --build",
     "lint": "eslint --format table --ext .js,.jsx .",
     "test": "cross-env NODE_ENV=test mocha --reporter progress --compilers js:babel-core/register --require ignore-styles --recursive \"./components/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch"
