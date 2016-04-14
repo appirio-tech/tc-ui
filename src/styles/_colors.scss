@@ -1,7 +1,8 @@
 // Topcoder Color Palette
 
 // Primary Brand
-$tc-light_blue: #26ADE9;
+$tc-light-blue: #26ADE9;
+$tc-dark-blue : #0B71E6;
 $tc-green     : #60C700;
 $tc-orange    : #FB7D22;
 $tc-yellow    : #FFF100;
@@ -16,37 +17,36 @@ $tc-gray-40: #A3A3AD;
 $tc-gray-30: #C3C3C8;
 $tc-gray-20: #DCDCE0;
 $tc-gray-10: #EDEDF2;
-
 $tc-gray-neutral-dark : #EBEBEB;
 $tc-gray-neutral-light: #FAFAFB;
 $tc-white: #FFFFFF;
 
 // Accents & Shades
-$tc-accent-blue   : #0B71E6;
-$tc-accent-blue-90: #1A85FF;
-$tc-accent-blue-70: #59A7FF;
-$tc-accent-blue-30: #CFE6FF;
-$tc-accent-blue-10: #F4F9FF;
+$tc-dark-blue   : $tc-dark-blue;
+$tc-dark-blue-90: #1A85FF;
+$tc-dark-blue-70: #59A7FF;
+$tc-dark-blue-30: #CFE6FF;
+$tc-dark-blue-10: #F4F9FF;
 
-$tc-accent-red   : #F22F24;
-$tc-accent-red-70: #FF5B52;
-$tc-accent-red-30: #FFD4D1;
-$tc-accent-red-10: #FFF4F4;
+$tc-red   : #F22F24;
+$tc-red-70: #FF5B52;
+$tc-red-30: #FFD4D1;
+$tc-red-10: #FFF4F4;
 
 $tc-gold   : #FCE217;
 $tc-gold-70: #FAED8E;
 $tc-gold-30: #FFF7CC;
 $tc-gold-10: #FFFDE6;
 
-$tc-green   : #60C700;
+$tc-green   : $tc-green;
 $tc-green-70: #96D957;
 $tc-green-30: #CFEFB2;
 $tc-green-10: #EFFAE5;
 
-$tc-accent-purple   : #9050A3;
-$tc-accent-purple-70: #B47DD6;
-$tc-accent-purple-30: #E2C7F2;
-$tc-accent-purple-10: #F8F2FB;
+$tc-purple   : #9050A3;
+$tc-purple-70: #B47DD6;
+$tc-purple-30: #E2C7F2;
+$tc-purple-10: #F8F2FB;
 
 // Badges
 $tc-gold  : $tc-gold;
@@ -54,7 +54,7 @@ $tc-silver: #A9BCD4;
 $tc-bronze: #BD731E;
 
 // Levels
-$tc-level-1: $tc-gray-50;
+$tc-level-1: $tc-gray-40;
 $tc-level-2: #25C089;
 $tc-level-3: #666EFF;
 $tc-level-4: #FCB816;
