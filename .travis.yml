@@ -5,6 +5,7 @@ install:
 - npm install
 script:
 - npm run lint
+- webpack -p --bail --progress --build
 sudo: false
 before_deploy:
 - npm-prepublish --verbose
@@ -14,9 +15,60 @@ deploy:
   api_key: "$NPM_API_KEY"
   on:
     tags: true
+- provider: s3
+  cache_control: max-age=31536000
+  detect_encoding: true
+  access_key_id: $AWS_KEY
+  secret_access_key: $AWS_SECRET
+  bucket: ui.topcoder-dev.com
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: dev
+- provider: s3
+  cache_control: max-age=31536000
+  detect_encoding: true
+  access_key_id: $QA_AWS_KEY
+  secret_access_key: $QA_AWS_SECRET
+  bucket: ui.topcoder-qa.com
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: qa
+- provider: s3
+  cache_control: max-age=31536000
+  detect_encoding: true
+  access_key_id: $MASTER_AWS_KEY
+  secret_access_key: $MASTER_AWS_SECRET
+  bucket: ui.topcoder.com
+  skip_cleanup: true
+  local_dir: dist
+  on:
+    branch: master
 env:
+  matrix:
+  - CXX=g++-4.8
   global:
   # NPM_EMAIL
   - secure: "OQfotwJGzux7avYLA8refzvHev4XsN5J2P8aW0T7Gez1rmIiar7i/ESl5ml+l+g0ouuUkYHJ6YuZK/B/vfcBCiOUq2b7H03A9lSO/SBPTthx62AOAjzn6Jv5LEBIlgAMmH6uDvH1/yU9GcD3tjMIbIeV+5rxTK+H9xD3fBRyniDbgQsselVmNxttOYZ/5i9xBIsoUcXvUjHFo5vYBrGSvMy1Q/F8Ch7WpH9Nb+UzQ+GWzcGtcB3dgaD2knDlF2S0sgey6t+HY2dEjSTyG/+0D/w3K3WFYKcslV6BeaywH0dSzjjw3DEG8nQRvhocbTle9g3n+0dYyzsgqLQ8fOu5/XkFIOamQRJGf7krqzCXWhjXcSHbI5VZZLjy89cE4e3+Xul211FnZeHMT5JnFQ9vGvK2g2BVAz30yxdw/0t6h7BBRpZBh1x/0kmKdVaYhOFbugEGLa6Zi/oBZyF/38WB4RtkEvw3iHU9mMT3Drp7MnGMTU6ewleZP1A3p1Gca7uRO/NaEESvDlMyEjtP6yp44dtYI8s8RcDe9M4fvfhS0AqxLQy3hDHdzNjdIX/yVzMC5vIKHzp9r0oklq/ASDSuUdRPZ7hCvEvD3JTmxody0EuX3CD/PMeowbDb5+3J2bMoET6S1aikPVSTnDIPDzBhOgRQ5Ltp8b7sqR6LqHBBGbA="
   # NPM_API_KEY
   - secure: "AyBzf+QOH+qHzUXrJh9Txn6ER3+GY480ooc94dxecLfHZHQEZWkANdHvcb7rhuUIKZwDN2PFe2F27hRFVhfS1fVJfLS6SqMRV6TWzF+hSPYqNEedzKpX1M6jwfquqJqoqLhqUJ/oR2n2FTMWbFBmvZT2YEgxaaWj0Go+buir5wE+WHCA6/s9z37oLlHDVEf0pSuzkXMtxFahZ5gCjN01KtsFXhPalmROH8cqb3YQfGyuwj50CMoL4QDzu5bk5ALTlsuH1fmhvYhwQJjQU5nqb5bkMGuCs6+HMvdlB+98HLw1cGfTpwKjC+hNAj/IKE3pnOqA5wTXGKpEG5pdAh/Wj6OOcmqDegKgJgEaJZWYFP8k5SzSJK1vY0MmdVk8FEwsrQ6vxo7qtsLjSgq7eXGonUde/iKIAGpl+9GjrnjuHPa17LduZ3zrsqoiautKRSSdmpv9IFB10OCWY4ejTG0I8xInQBpi7oSmKywE9d98g0mJTwJBAwifFWmY/AJz9RBl6vrWPNTgJ0WgJZaRSuBilROe2D8bbc7tfChqpkLoqlK9Cl4PH0G3OdPcjn+UI7sTfTwkOGhjTq8vgvtzO2KOym2QfItfQJfdbMlRi+DPej5RHJFPI9jLhDBuDofPLs2pAbRRTTZjc4iKrcr233or1gJWEAfiUg0T1YxG3Bu1gdo="
+  # AWS_KEY
+  - secure: "CAqbyIDok8USUuDkQ/9uZAd4jPK95iMGe3X7TwwI3423J3iYRfNN06hTik+8a+JD0wsP5uLC5uwkgyCBrCoVwcK6GchEwx27HKICGARbRoIUyT3cHALUlpQNGhW2uUW6Pz3OpK37CxeZnCaszN2ZEMCIkPY13V+Y2p5vmGyq8TXLV0kI27Hew9Oh2JPKfuPo/raRqoe5gLuV6EkEUhXepi3QjfE7lg3+pwtx6TGm6VoLyBLvkFgxR1l9QMVcX8cdgSGNg7fFeFDdd+1u7e81aOH9xHYpvoWQie3PAKS+MIb4E1AWx9UZqD4F4s8z379vDWnN/gM3rqxMlhz7avuaGVrMwZ5wvAv8c5uSznaB14svBT59lKPg7giXt6tdDAFSktPUG+ONN/69vLPLcH29RO4BBWRg7TEyxdpliw8gWSYw2cW2jjkmtNQgzZJt9Ntu+exO3H8JMgadpLkpd0wl7MIb0CQF+7uJW27GkUGO4ichDVycUWzFaibbzRwAo47GSb9yhjzjjgD+QzxBPUZYZmsdTHCc+3IVd7nfDGGKoDYGkCgWQDIjt0hdpMnkQIFZI3HeqW2LxdlFCQ+S7bTyRwY9Dx166K/XY9W3wF7h04/25Zg1JsERWzi3O/1idwwNi3nGza24E+fNf0RnlR7CxZe9/SoC/hFEZbQ3JkO8/JM="
+  # AWS_SECRET
+  - secure: "El9l9pRuBGWpC2SasQar2cVtc62ZteTA09eHDKr6jDDylcsRtONnLIDtlbuPCdphgh9urQLvkcwMQ0Y26yyN+wtO5KbMBUkQChQR+U1NLZCcCdxT/38JAWvTkZeKmRw5eznwglWf3SlBT4Wcu7Ks1mA1tn1t8QWyiMsfSKOIM8kgf7ubARkEDtS9neJdYvm815g4mlm9qm2pavUOb2q5Damg2JFUlVII7lWIetbkX63pHnJw8LmwFYkSdxHim4z5bfxRcgggXGhzvxUoOtmZNVSGCF+y6xsfNK47LVV+sjCy4s8HU2gx/S0FIUct5bSS4nR6MTmMXObfB7Bp7OWh3kPk6k7IBf4NULLvvFKZhzJKNvqIpTNRaxjSsyi8eoWQRArQKJTUCIMNXzMp8rfT14FsMHdZioPvo0mbh2EbmJ2Zav3+jn9qrXXatXYp5unVPvB4BDenu50lKUISc1yD6wc+EiZS3ILVtqeVVdLp2LRaFtJMUsvyGtZg6p0cNDLBfgqoGvV7+0IZHk7L/ROWtRfAFKIMnHuH11CMrA1hxespooNwMbYPvEiNvskVr4PIBMqPLCx9maQf8RAp6au1hiSAneKKxfLKD5red+KQxq3mYwB1xn8aNgnkc3hx90C/zGiaVUo4h4A0yWw1gg4oeI87ju1LirJ9fBoZTWXqEP8="
+  # QA_AWS_KEY
+  - secure: "k3r0piY2PxvqXeTLo5vNE2nW0YpZ8pMAbDwI+TckrgkzaEeizIfpLGB1hxynTleIaJZFoFz9D7ALnLXN1wlIQBDfwotQ7RvMs67knKBWeiqPdLOlP0pZTeptMZwIV7dTXvdE6Wkm6wkOEjA7mKof2a7IKTvFp6mlfgPbN1bgOuxfMuDoYEBVMOjAWRdSNchvnT/SS9m9AKkJQtA53UNplYBS+6HGJBjtETfxs0fmLhgji/UGHBlRq3iVHRqmfZMY0b/7Ngey6AwC5PXvgt5xOMXBMWAgeFbs4PlnwJqDfr+zACdybllfzDWpo2+d4EhlqjWLdc7jpDK/wWSX3YL6Yx5XGCnMTEBtGw3kW+yuknMBkxfKdjBzPzGlS6V7gl/c7f8Vp9GfdTUmHHiL/KudxJ/sEJ0LxfrU5chr0BGioxx9R+uFm5CQp6V50u6qIxMohEt/ktLXWI/c3kmQh/m9sJ8VD9R93v6ps/BobPqHhK4CGI8eLz+6Y4JGc/tNMeJnOHEkSQoUX63WMdL2UuQ/7rGkVHJGF/gIghAAa1/4OpOZ5JLQQUcPqqtSJGc4YNGzTUmcXLhnPJ+5ADZIwgRK28XGyqHEGhUAJZQeatazukDD39EYGmy90IngsAuY4ob9sClLXkpbCQsSmgc6EDOVPsvI7t761iJ31S0mlO5NdZ0="
+  # QA_AWS_SECRET
+  - secure: "i2Rq40gEeAyL7b/kwGS0GJra5Cl4mdXtVQIFKJbiIE6AtiES2hRRjwgNnA6ROpSf/q5TePvBkm9qwtbl2Yl9UQ77Q1tZfWNu6gT89HjkYHAf7TAtnn+mV/Lwq7rB1bZm72WjAvPSlXw9U+Ko22xbKlQ4H0qrKC+SwIk5lHFmkQkImyrnklGxhOxV1N5TlyoP4U/TgGofynjGpRFe/gKdgMRow1iyXp2lFFGM3ADDRic4IDuccWCSaVIQV9/6ebjJKAoDh0aWNLzSqlGMWlreZZUS2oMDTAljypI88IhysdxYQq+by5D4oUbka2neX3p4TnsARcJGGzmnZ6lSJz+8xwW/IN/M9EwhDd1ddX+TxAJYbxofhJ2snlHQJdiEpHIvMEEopJP7n1bLbv8VIJ7SyW2bI1QlcdLLpwYLxpK3+Q07PaLlbvNvXH7GanJmowGNU2GC3qAAU9vmaGIPa41AKbghPJeriy7fhRtl8G7a1C5bwwXWfnkkTtkDF8/XVbKZ2uVWUkFaqkNY7/WX/DMknB63O7cAOzZP7LOQ1P84e/kdF7WgEkKPLIuPXoZFimkWJ9VDqt+WxMCYM9bLeYRQUZdf6sTqbojm3qqyUrBwK4Y6c83WWzik+vX+B9VFbdR94f1utOVoS6iqQlOte/qImKqHedPu4Egvr/o6v6MVh0c="
+  # MASTER_AWS_KEY
+  - secure: "a1eHsDYqGY+4M/fP9M7FfIITPHsthXIctNj7ykF/ul6SmXkp1KLlTSMAghwIgfTGfr1ksYWzfXCQoaRcW+f4Yt6nzEbJLmPTavdudhD8qpQXfdaT7J+5Z+RDZaHATz/daDOtGox6i9yoaIUffO8UN1bqWFweCf09nOAgFJFZ+hiR6p+trZfv+nlsHc7hhTS/YXHQ/zzzRQI2xe4NfvAHGzKZofqP7smWucyOTM0tWj4JjVOQqa8zeAuYT8Y+gwpeUXf5K81i5R2T2CQwUOPV0V8/DMaAXo5fNRxajt+M/pFBPT8+Xr1yLG32/sgAMtJpFg3BXlD0mzjRw9a/W7Vfg2RfxhB/k47qtHLN4FW+w6bQwSq6Te//fbBLRdwwZ8AjhHcdj/iVurq8+Dv5J05HE+G3t9SgyyRa75UO4PSW6W7k+LTTuK0ytoAH1DsB6fuvwx5+JQ1uLQ95zJq184qXJ9dGciqOmvyoeOxcuGuD8cp2NnhyT/xPlmxE85XDAeTX+Ys08Z0c5GacYe+TBiHTxiq3HRiMiyE/Q+s6EuaAsgQyf/pZTYGauZnnYQp7wPsQ+VZeKRFtZJH/HG151SDoR/HCjodnxNx8IXrezTvBnFdltDP/LgbcrMVJ/upfylaBkXAH/DTQgpGoMKIWIc+YIhIDDXSIhtwQJcpefB6FiKM="
+  # MASTER_AWS_SECRET
+  - secure: "HN5GKJ3kkV64/s0CRtf7/PnFINucU8ApBnMePNu6GXX0MW7jma69jpBcTJpZ3LfNhSDGc8n7zeJddDbEWeApQ/gc8vzo5+kMBDpsXVJg1ktceHNzLFLNOLSOU05Jf/3lCvNJ3tEbb6QXCxeUkklor1Yw/ucdmhTALgyO1Q1wqQNEGVssMUqx8bU2p8ehJ/XsdFVcEed/71huLKJiSOjnO/1u0zeslxicVXU418lBrGIKXe2jbArdQERi3fGA/kb7VSMGUYoSaMHqk21eBo+hdUuGxSvbvg6rA2lzZ+a78gjPc/cGc3wX+7gPtpuS2fOp1zW5b9L2Yy5foHuDPFtdLleIC6/YOytdjcpWIQny490T4aG9c0gK+0pEesBF48AL4facA+Ca4+G7cltKN7HgBZtC2j2LmpSN9QU5HOUOhqE7J37E/uD7vag+9m6U+vSELTxrmYRSnz4/iZJpNr7FRKtnKmF0tLh+Tl+g11jEacIVTddDdvEZb7a/u7B6lAxCs79cA69L32RXAX47hrJv6vEWwNkapDEPDS6nN7TpnGDrAbVxd/fT7cMPSR22FbT9tmFxAbLdc5d7NFlnC7ZZnR5d8Qw7xqYAZbO74i5wNkBQSuRSNkgN+bGZTAf/ps3f7DXg1lQ6K2HUjJKR9wB3PxDwnpn7pVd2Q769nudSV7I="
+
+  addons:
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+      packages:
+        - g++-4.8
