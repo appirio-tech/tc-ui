@@ -14,6 +14,7 @@ export default function ExampleComponent({ items }) {
   const row = (item, index) => {
     // Use the classnames module for dynamic class names
     const itemClassnames = classNames(
+      'example-item',
       { [`${item.name}-color`]: item.isFeatured },
       { 'on-sale': item.onSale}
     )

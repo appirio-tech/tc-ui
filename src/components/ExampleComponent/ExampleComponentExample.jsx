@@ -1,6 +1,8 @@
 import React from 'react'
 import ExampleComponent from './ExampleComponent.jsx'
 
+require('./ExampleComponentExample.scss')
+
 const items = [
   {
     name: 'peaches',
@@ -17,8 +19,8 @@ const items = [
 const ExampleComponentExample = {
   render() {
     return (
-      <div>
-        <h1> Topcoder UI Example Component </h1>
+      <div className="example-component-container">
+        <h1>Example React Component</h1>
 
         <ExampleComponent items={items} />
       </div>
