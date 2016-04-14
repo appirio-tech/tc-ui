@@ -1,6 +1,6 @@
 // Whenever you need predefined color variables or mixins
 // Add the following line to the top of your .scss file
-@import 'topcoder/tc-includes';
+@import '../../styles/tc-includes';
 
 // Declare local variables, if necessary
 $peaches: #ffdab9;
@@ -19,16 +19,22 @@ $peaches: #ffdab9;
 
 // Prefer flat over nested structure
 .item-list {
-  background-color: $white;
+  font-family: 'Roboto', Arial;
+  background-color: $tc-white;
+}
+
+.example-item {
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .peaches-color {
-  color: $peaches
+  color: $peaches;
 }
 
 // Always nest media queries
 .on-sale {
-  border: 3px solid $primary;
+  border: 3px solid $tc-light_blue;
   @media screen and (max-width: 700px) {
     border-width: 2px;
   }
