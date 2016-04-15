@@ -10,7 +10,14 @@ html {
   box-sizing: inherit;
 }
 
-//TODO: add necessary body styling for tc app
 body {
   min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited, &:hover, &:active {
+    color: inherit;
+  }
 }

@@ -1,32 +1,32 @@
 // FONTS
 
-@mixin roboto-regular {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+@mixin roboto {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 @mixin roboto-medium {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 500;
 }
 
 @mixin proxima-nova-thin {
-  font-family: 'Proxima-Nova', Arial, Helvetica, sans-serif;
-  font-weight: 100;
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
 @mixin proxima-nova-light {
-  font-family: 'Proxima-Nova', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 
-@mixin proxima-nova-regular {
-  font-family: 'Proxima-Nova', Arial, Helvetica, sans-serif;
+@mixin proxima-nova {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 
 @mixin proxima-nova-semi-bold {
-  font-family: 'Proxima-Nova', Arial, Helvetica, sans-serif;
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
@@ -45,13 +45,13 @@
 }
 
 @mixin tc-label-small {
-  @include roboto-regular
+  @include roboto
   font-size: 12px;
   line-height: 15px;
 }
 
 @mixin tc-label-extra-small {
-  @include roboto-regular;
+  @include roboto;
   font-size: 11px;
   line-height: 15px;
 }
@@ -59,45 +59,45 @@
 //BODY TYPOGRAPHY SIZES
 
 @mixin tc-body {
-  @include proxima-nova-regular;
+  @include proxima-nova;
   font-size: 16px;
   line-height: 25px;
 }
 
 @mixin tc-body-large {
-  @include proxima-nova-regular;
+  @include proxima-nova;
   font-size: 20px;
   line-height: 25px;
 }
 
 @mixin tc-body-small {
-  @include proxima-nova-regular;
+  @include proxima-nova;
   font-size: 14px;
   line-height: 20px;
 }
 
 @mixin tc-body-extra-small {
-  @include proxima-nova-regular;
+  @include proxima-nova;
   font-size: 12px;
   line-height: 20px;
 }
 
 //HEADING TYPOGRAPHY SIZES
 
-@mixin tc-heading {
-  @include proxima-nova-regular;
-  font-size: 28px;
-  line-height: 35px;
-}
-
-@mixin tc-heading-large {
+@mixin tc-heading-extra-large {
   @include proxima-nova-light;
   font-size: 42px;
   line-height: 50px;
 }
 
-@mixin tc-heading-medium {
-  @include proxima-nova-regular;
+@mixin tc-heading-large {
+  @include proxima-nova;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+@mixin tc-heading {
+  @include proxima-nova;
   font-size: 20px;
   line-height: 30px;
 }

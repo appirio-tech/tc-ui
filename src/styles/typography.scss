@@ -1,13 +1,13 @@
 h1 {
-  @include tc-heading-large;
+  @include tc-heading-extra-large;
 }
 
 h2 {
-  @include tc-heading;
+  @include tc-heading-large;
 }
 
 h3 {
-  @include tc-heading-medium;
+  @include tc-heading;
 }
 
 h4 {
