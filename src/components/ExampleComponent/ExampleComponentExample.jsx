@@ -21,6 +21,8 @@ const ExampleComponentExample = {
     return (
       <div className="example-component-container">
         <h1>Example React Component</h1>
+        <button> Add File </button>
+        <button className="primary"> Add File </button>
 
         <ExampleComponent items={items} />
       </div>

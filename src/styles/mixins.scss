@@ -113,3 +113,46 @@
   font-size: 14px;
   line-height: 25px;
 }
+
+//BUTTON
+
+@mixin tc-button {
+  @include tc-label-large;
+  color:            $tc-gray-70;
+  border-radius:    2px;
+  border:           1px solid $tc-gray-50;
+  background-color: $tc-white;
+  height:           40px;
+  padding:          10px 25px;
+  cursor:           pointer;
+  display:          inline-block;
+
+  &:hover {
+    background: linear-gradient(0deg, $tc-white, #F5F5F5);
+  }
+
+  &:active {
+    background: linear-gradient(0deg, #F5F5F5, $tc-white);
+  }
+
+  &:focus {
+    border: 1px solid $tc-dark-blue-90;
+    outline: none;
+  }
+}
+
+@mixin tc-button-primary {
+  @include tc-button
+  background-color: $tc-dark-blue-90;
+  border: 1px solid $tc-dark-blue;
+  color: $tc-gray-neutral-light;
+
+  &:hover {
+    background: linear-gradient(0deg, #127BF3, #3996FF);
+  }
+
+  &:active {
+    background: linear-gradient(0deg, #3996FF, #127BF3);
+  }
+}
+

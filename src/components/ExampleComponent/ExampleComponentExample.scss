@@ -5,3 +5,12 @@
   margin: 20px;
   width: 400px;
 }
+
+button {
+  @include tc-button;
+  margin: 10px;
+
+  &.primary {
+    @include tc-button-primary;
+  }
+}
