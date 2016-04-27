@@ -1,4 +1,8 @@
 // FONTS
+@mixin roboto-light {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
 
 @mixin roboto {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -8,6 +12,11 @@
 @mixin roboto-medium {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 500;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 
 @mixin proxima-nova-thin {
@@ -25,9 +34,19 @@
   font-weight: 400;
 }
 
+@mixin proxima-nova-medium {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
 @mixin proxima-nova-semi-bold {
   font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
   font-weight: 600;
+}
+
+@mixin proxima-nova-bold {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 
 // LABEL TYPOGRAPHY SIZES
