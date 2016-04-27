@@ -10,9 +10,9 @@ const webpackConfig = require('appirio-tech-webpack-config')
 
 const config = webpackConfig({
   dirname: __dirname,
-  template: './src/index.html',
+  template: './tc-ui-app/index.html',
   entry: {
-    app: ['./src/index']
+    app: ['./tc-ui-app/index']
   }
 })
 

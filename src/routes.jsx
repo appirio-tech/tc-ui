@@ -2,7 +2,7 @@ import React from 'react'
 import Route from 'react-router/lib/Route'
 import IndexRoute from 'react-router/lib/IndexRoute'
 
-import App from './components/App/App'
+import App from './tc-ui-app/App/App'
 import ExampleComponentExample from './components/ExampleComponent/ExampleComponentExample'
 
 export default (
