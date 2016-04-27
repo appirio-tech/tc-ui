@@ -1,53 +1,90 @@
 @import 'tc-includes';
 
-h1 {
-  @include tc-heading-extra-large;
+// Headings
+h1, .tc-heading-extra-large {
+  font-size: $tc-heading-extra-large;
+  line-height: $base-unit * 10;
+  color: $tc-black;
 }
 
-h2 {
-  @include tc-heading-large;
+h2, .tc-heading-large {
+  font-size: $tc-heading-large;
+  line-height: $base-unit * 7;
+  color: $tc-black;
 }
 
-h3 {
-  @include tc-heading;
+h3, .tc-heading {
+  font-size: $tc-heading;
+  line-height: $base-unit * 6;
+  color: $tc-black;
 }
 
-h4 {
-  @include tc-heading-small;
+h4, .tc-heading-small {
+  font-size: $tc-heading-small;
+  line-height: $base-unit * 5;
+  color: $tc-black;
 }
 
-h5 {
-  @include tc-heading-extra-small;
+h5, .tc-heading-extra-small {
+  font-size: $tc-heading-extra-small;
+  line-height: $base-unit * 5;
+  color: $tc-black;
 }
 
-p {
-  @include tc-body;
-
-  &.large {
-    @include tc-body-large;
-  }
-
-  &.small {
-    @include tc-body-small;
-  }
-
-  &.extra-small {
-    @include tc-body-extra-small;
-  }
+.tc-body-large {
+  @include proxima-nova;
+  font-size: $tc-body-large;
+  line-height: $base-unit * 5;
+  color: $tc-gray-80;
 }
 
-label {
-  @include tc-label;
+// Body
+.tc-body {
+  @include proxima-nova;
+  font-size: $tc-body;
+  line-height: $base-unit * 5;
+  color: $tc-gray-80;
+}
 
-  &.large {
-    @include tc-label-large;
-  }
+.tc-body-small {
+  @include proxima-nova;
+  font-size: $tc-body-small;
+  line-height: $base-unit * 5;
+  color: $tc-gray-80;
+}
 
-  &.small {
-    @include tc-label-small;
-  }
+.tc-body-extra-small {
+  @include proxima-nova;
+  font-size: $tc-body-extra-small;
+  line-height: $base-unit * 4;
+  color: $tc-gray-80;
+}
 
-  &.extra-small {
-    @include tc-label-extra-small;
-  }
+// Labels
+.tc-label-large {
+  @include roboto;
+  font-size: $tc-label-large;
+  line-height: $base-unit * 4;
+  color: $tc-black;
+}
+
+.tc-label {
+  @include roboto;
+  font-size: $tc-label;
+  line-height: $base-unit * 4;
+  color: $tc-black;
+}
+
+.tc-label-small {
+  @include roboto;
+  font-size: $tc-label-small;
+  line-height: $base-unit * 3;
+  color: $tc-black;
+}
+
+.tc-label-extra-small {
+  @include roboto;
+  font-size: $tc-label-extra-small;
+  line-height: $base-unit * 3;
+  color: $tc-black;
 }
