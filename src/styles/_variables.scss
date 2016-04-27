@@ -2,8 +2,12 @@
 
 // Table of Contents
 //
+// Base
 // Colors
 // Typography
+
+// Base
+$base-unit: 5px;
 
 // Colors
 //
@@ -73,3 +77,23 @@ $tc-level-5: #E6175C;
 //
 // Font, line-height, etc.
 
+// Labels
+$tc-label-large      : 15px;
+$tc-label            : 13px;
+$tc-label-small      : 12px;
+$tc-label-extra-small: 11px;
+
+// Body
+$tc-body-large       : 20px;
+$tc-body            : 16px;
+$tc-body-small      : 14px;
+$tc-body-extra-small: 12px;
+
+// Headings
+$tc-heading-extra-large: 42px;
+$tc-heading-large      : 28px;
+$tc-heading            : 20px;
+$tc-heading-small      : 16px;
+$tc-heading-extra-small: 14px;
+
+// Line-heights
