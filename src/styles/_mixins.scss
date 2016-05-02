@@ -1,0 +1,131 @@
+// Font families and weights
+@mixin roboto-light {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin roboto {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin roboto-medium {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+@mixin proxima-nova-thin {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+@mixin proxima-nova-light {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin proxima-nova {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin proxima-nova-medium {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@mixin proxima-nova-semi-bold {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+@mixin proxima-nova-bold {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+// Labels
+@mixin tc-label-large {
+  @include roboto;
+  font-size: $tc-label-large;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label {
+  @include roboto;
+  font-size: $tc-label;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label-small {
+  @include roboto;
+  font-size: $tc-label-small;
+  line-height: $base-unit * 3;
+}
+
+@mixin tc-label-extra-small {
+  @include roboto;
+  font-size: $tc-label-extra-small;
+  line-height: $base-unit * 3;
+}
+
+// Body
+@mixin tc-body-large {
+  @include proxima-nova;
+  font-size: $tc-body-large;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body {
+  @include proxima-nova;
+  font-size: $tc-body;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-small {
+  @include proxima-nova;
+  font-size: $tc-body-small;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-extra-small {
+  @include proxima-nova;
+  font-size: $tc-body-extra-small;
+  line-height: $base-unit * 4;
+}
+
+// Headings
+@mixin tc-heading-extra-large {
+  @include proxima-nova;
+  font-size: $tc-heading-extra-large;
+  line-height: $base-unit * 10;
+}
+
+@mixin tc-heading-large {
+  @include proxima-nova;
+  font-size: $tc-heading-large;
+  line-height: $base-unit * 7;
+}
+
+@mixin tc-heading {
+  @include proxima-nova;
+  font-size: $tc-heading;
+  line-height: $base-unit * 6;
+}
+
+@mixin tc-heading-small {
+  @include proxima-nova;
+  font-size: $tc-heading-small;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-heading-extra-small {
+  @include proxima-nova;
+  font-size: $tc-heading-extra-small;
+  line-height: $base-unit * 5;
+}

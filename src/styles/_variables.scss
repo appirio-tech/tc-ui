@@ -1,3 +1,16 @@
+// Variables
+
+// Table of Contents
+//
+// Base
+// Colors
+// Typography
+
+// Base
+$base-unit: 5px;
+
+// Colors
+//
 // Topcoder Color Palette
 
 // Primary Brand
@@ -59,3 +72,26 @@ $tc-level-2: #25C089;
 $tc-level-3: #666EFF;
 $tc-level-4: #FCB816;
 $tc-level-5: #E6175C;
+
+// Typography
+//
+// Label, body, and heading font sizes
+
+// Labels
+$tc-label-large      : 15px;
+$tc-label            : 13px;
+$tc-label-small      : 12px;
+$tc-label-extra-small: 11px;
+
+// Body
+$tc-body-large      : 20px;
+$tc-body            : 16px;
+$tc-body-small      : 14px;
+$tc-body-extra-small: 12px;
+
+// Headings
+$tc-heading-extra-large: 42px;
+$tc-heading-large      : 28px;
+$tc-heading            : 20px;
+$tc-heading-small      : 16px;
+$tc-heading-extra-small: 14px;
