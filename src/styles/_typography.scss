@@ -1,56 +1,22 @@
 @import 'tc-includes';
 
 // Headings
-h1, .tc-heading-extra-large {
+h1 {
   @include tc-heading-extra-large;
 }
 
-h2, .tc-heading-large {
+h2 {
   @include tc-heading-large;
 }
 
-h3, .tc-heading {
+h3 {
   @include tc-heading;
 }
 
-h4, .tc-heading-small {
+h4 {
   @include tc-heading-small;
 }
 
-h5, .tc-heading-extra-small {
+h5 {
   @include tc-heading-extra-small;
-}
-
-.tc-body-large {
-  @include tc-body-large;
-}
-
-// Body
-.tc-body {
-  @include tc-body;
-}
-
-.tc-body-small {
-  @include tc-body-small;
-}
-
-.tc-body-extra-small {
-  @include tc-body-extra-small;
-}
-
-// Labels
-.tc-label-large {
-  @include tc-label-large;
-}
-
-.tc-label {
-  @include tc-label;
-}
-
-.tc-label-small {
-  @include tc-label-small;
-}
-
-.tc-label-extra-small {
-  @include tc-label-extra-small;
 }
