@@ -1,0 +1,18 @@
+// Buttons
+
+// Table of Contents
+//
+// Links
+// Buttons
+
+// Links
+.tc-link,
+.tc-link:active,
+.tc-link:visited {
+  cursor: pointer;
+}
+
+.tc-link:hover {
+  color: $tc-dark-blue;
+  text-decoration: none;
+}
