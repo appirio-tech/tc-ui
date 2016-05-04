@@ -114,5 +114,5 @@ SCSS Files
 ## Install
 
 ```
-npm install tc-ui
+npm install --save tc-ui
 ```
