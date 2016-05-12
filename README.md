@@ -15,7 +15,7 @@ Install dependencies by running the following in the root of the project:
  - **Note:** You must use npm 3. Type `npm -v` to ensure you have a 3.x version.
 
 ## NPM Commands
-- To run locally, run `npm run dev` and head to `localhost:8080`
+- To run locally, run `npm start` and head to `localhost:8080`
 - To make sure your code passes linting: `npm run lint`
 - To create the build: `npm run build`
 
