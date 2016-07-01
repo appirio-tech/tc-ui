@@ -29,54 +29,54 @@ a {
 }
 
 .flex {
-  display: flex;
+  @include display(flex);
 
   &.column {
-    flex-direction: column;
+    @include flex-direction(column);
   }
 
   &.center {
-    justify-content: center;
+    @include justify-content(center);
   }
 
   &.end {
-    justify-content: flex-end;
+    @include justify-content(flex-end);
   }
 
   &.space-between {
-    justify-content: space-between;
+    @include justify-content(space-between);
   }
 
   &.space-around {
-    justify-content: space-around;
+    @include justify-content(space-around);
   }
 
   &.middle {
-    align-items : center;
+    @include align-items(center);
   }
 
   &.stretch {
-    align-items: stretch;
+    @include align-items(stretch);
   }
 
   &.bottom {
-    align-items: flex-end;
+    @include align-items(flex-end);
   }
 
   &.wrap {
-    flex-wrap: wrap;
+    @include flex-wrap(wrap);
   }
 }
 
 .flex-grow {
-  flex-grow: 1;
+  @include flex-grow(1);
 }
 
 .flex-one {
-  flex: 1;
+  @include flex(1);
 }
 
 .flex-shrink {
-  flex-shrink: 1;
-  flex-basis: 100px;
+  @include flex-shrink(1);
+  @include flex-basis(100px);
 }
