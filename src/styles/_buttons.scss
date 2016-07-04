@@ -16,3 +16,80 @@
   color: $tc-dark-blue;
   text-decoration: none;
 }
+
+.tc-btn {
+  @include proxima-nova-medium;
+  border-radius: 2px;
+}
+
+.tc-btn:focus {
+  outline: none;
+}
+
+.tc-btn-lg {
+  height: 50px;
+  padding: 10px 30px;
+}
+
+.tc-btn-md {
+  height: 40px;
+  padding: 10px 25px;
+}
+
+.tc-btn-sm {
+  height: 30px;
+  padding: 5px 15px;
+}
+
+.tc-btn-xs {
+  height: 20px;
+  padding: 3px 10px;
+}
+
+.tc-btn-pressed {
+  box-shadow: 0px 1px 3px 0px $tc-gray-80;
+}
+
+.tc-btn-primary {
+  background-color: $tc-dark-blue-90;
+  color: $tc-gray-neutral-light;
+  border: 1px solid $tc-dark-blue;
+}
+
+.tc-btn-primary:hover {
+  color: $tc-gray-neutral-light;
+  @include background(linear-gradient($tc-dark-blue-90, $tc-dark-blue) left repeat);
+}
+
+.tc-btn-primary:active {
+  color: $tc-gray-neutral-light;
+  @include background(linear-gradient($tc-dark-blue, $tc-dark-blue-90) left repeat);
+}
+
+.tc-btn-secondary {
+  background-color: $tc-gray-40;
+  color: $tc-gray-neutral-light;
+  border: 1px solid $tc-gray-50;
+}
+
+.tc-btn-secondary:hover {
+  color: $tc-gray-neutral-light;
+  @include background(linear-gradient($tc-gray-40, $tc-gray-50) left repeat);
+}
+
+.tc-btn-secondary:active {
+  color: $tc-gray-neutral-light;
+  @include background(linear-gradient($tc-gray-50, $tc-gray-40) left repeat);
+}
+
+.tc-btn-default {
+  background-color: white;
+  color: $tc-gray-70;
+  border: 1px solid $tc-gray-50;
+}
+
+.tc-btn-warning {
+  background-color: $tc-red-70;
+  color: $tc-gray-neutral-light;
+  border: 1px solid $tc-red;
+}
