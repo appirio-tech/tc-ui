@@ -1,7 +1,10 @@
-@import 'reset';
 @import 'tc-includes';
-@import 'typography';
+@import 'reset';
+
+// Use to list all modules to include
 @import 'buttons';
+@import 'forms';
+@import 'typography';
 
 // App level resets
 html {
@@ -26,4 +29,59 @@ a {
   &:visited, &:hover, &:active {
     color: inherit;
   }
+}
+
+
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.space-around {
+    justify-content: space-around;
+  }
+
+  &.middle {
+    align-items: center;
+  }
+
+  &.stretch {
+    align-items: stretch;
+  }
+
+  &.bottom {
+    align-items: flex-end;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+  flex-basis: 100px;
 }

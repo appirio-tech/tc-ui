@@ -1,0 +1,156 @@
+// Mixins
+
+// Table of Contents
+//
+// Font families
+// Labels
+// Body
+// Headings
+// Common
+
+// Font families and weights
+@mixin roboto-light {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin roboto {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin roboto-medium {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@mixin roboto-bold {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+// Labels
+@mixin tc-label-lg {
+  @include roboto;
+  font-size: $tc-label-lg;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label-md {
+  @include roboto;
+  font-size: $tc-label-md;
+  line-height: $base-unit * 4;
+}
+
+@mixin tc-label-sm {
+  @include roboto;
+  font-size: $tc-label-sm;
+  line-height: $base-unit * 3;
+}
+
+@mixin tc-label-xs {
+  @include roboto;
+  font-size: $tc-label-xs;
+  line-height: $base-unit * 3;
+}
+
+// Body
+@mixin tc-body-large {
+  @include roboto;
+  font-size: $tc-body-large;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body {
+  @include roboto;
+  font-size: $tc-body;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-small {
+  @include roboto;
+  font-size: $tc-body-small;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-body-extra-small {
+  @include roboto;
+  font-size: $tc-body-extra-small;
+  line-height: $base-unit * 4;
+}
+
+// Headings
+@mixin tc-heading-extra-large {
+  @include roboto;
+  font-size: $tc-heading-extra-large;
+  line-height: $base-unit * 10;
+}
+
+@mixin tc-heading-large {
+  @include roboto;
+  font-size: $tc-heading-large;
+  line-height: $base-unit * 7;
+}
+
+@mixin tc-heading {
+  @include roboto;
+  font-size: $tc-heading;
+  line-height: $base-unit * 6;
+}
+
+@mixin tc-heading-small {
+  @include roboto;
+  font-size: $tc-heading-small;
+  line-height: $base-unit * 5;
+}
+
+@mixin tc-heading-extra-small {
+  @include roboto;
+  font-size: $tc-heading-extra-small;
+  line-height: $base-unit * 5;
+}
+
+// Common
+@mixin tc-track-colors {
+  &.develop { color: $tc-green; }
+  &.design  { color: $tc-light-blue; }
+  &.data    { color: $tc-orange; }
+}
+
+@mixin tc-track-background-colors {
+  &.develop { background-color: $tc-green; }
+  &.design  { background-color: $tc-light-blue; }
+  &.data    { background-color: $tc-orange; }
+}
+
+@mixin tc-member-level-background-colors {
+  &.level-1 { background-color: $tc-level-1; }
+  &.level-2 { background-color: $tc-level-2; }
+  &.level-3 { background-color: $tc-level-3; }
+  &.level-4 { background-color: $tc-level-4; }
+  &.level-5 { background-color: $tc-level-5; }
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+// Replace the bourbon background with simple linear gradient - we only use this for the buttons;
+@mixin background-gradient($start, $stop) {
+  background: $start;
+  background: linear-gradient(top, $start 0%, $stop 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$stop',GradientType=0 ); /* IE6-9 */
+}
+
+// Placeholder 
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content;}
+  &:-moz-placeholder           {@content;}
+  &::-moz-placeholder          {@content;}
+  &:-ms-input-placeholder      {@content;}
+
+
+}
