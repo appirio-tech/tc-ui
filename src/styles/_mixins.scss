@@ -160,3 +160,9 @@
   &.level-4 { background-color: $tc-level-4; }
   &.level-5 { background-color: $tc-level-5; }
 }
+
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

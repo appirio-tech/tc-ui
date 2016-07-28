@@ -27,3 +27,56 @@ a {
     color: inherit;
   }
 }
+
+.flex {
+  @include display(flex);
+
+  &.column {
+    @include flex-direction(column);
+  }
+
+  &.center {
+    @include justify-content(center);
+  }
+
+  &.end {
+    @include justify-content(flex-end);
+  }
+
+  &.space-between {
+    @include justify-content(space-between);
+  }
+
+  &.space-around {
+    @include justify-content(space-around);
+  }
+
+  &.middle {
+    @include align-items(center);
+  }
+
+  &.stretch {
+    @include align-items(stretch);
+  }
+
+  &.bottom {
+    @include align-items(flex-end);
+  }
+
+  &.wrap {
+    @include flex-wrap(wrap);
+  }
+}
+
+.flex-grow {
+  @include flex-grow(1);
+}
+
+.flex-one {
+  @include flex(1);
+}
+
+.flex-shrink {
+  @include flex-shrink(1);
+  @include flex-basis(100px);
+}
