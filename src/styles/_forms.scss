@@ -153,12 +153,12 @@
 
 .form-block__fields {
   width: 100%;
-  border-bottom: 6px solid $gray-lighter;
+  border-bottom: 6px solid $tc-gray-20;
   @media screen and (min-width: 1000px) {
     width: 73%;
     padding-left: 60px;
     border-bottom: none;
-    border-left: 6px solid $gray-lighter;
+    border-left: 6px solid $tc-gray-20;
   }
 }
 
@@ -221,14 +221,14 @@ toggle-password-with-tips > input[type='password']  {
   margin-bottom: 10px;
   outline: none;
   background: $tc-white;
-  border: 1px solid $gray-dark;
+  border: 1px solid $tc-gray-30;
   box-shadow: inset 0px 0px 2px 0px rgba(183, 183, 183, 0.2);
   border-radius: 2px;
   cursor: auto;
 
   &:hover {
     border: 1px solid $tc-gray-80;
-    box-shadow: inset 0px 0px 2px 0px $gray-dark;
+    box-shadow: inset 0px 0px 2px 0px $tc-gray-30;
   }
 
   &:focus,
