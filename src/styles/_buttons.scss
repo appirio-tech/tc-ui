@@ -21,82 +21,94 @@ a.tc-link:hover,
   text-decoration: none;
 }
 
-a.tc-btn,
 .tc-btn {
-  @include proxima-nova-medium;
-  border-radius: 2px;
+  @include roboto;
+  border-radius: $corner-radius;
+  cursor: pointer;
+  user-select:none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-a.tc-btn:focus,
-.tc-btn:focus {
-  outline: none;
-}
-
-a.tc-btn-lg,
-.tc-btn-lg {
-  height: 50px;
-  padding: 10px 30px;
-}
-
-a.tc-btn-md,
-.tc-btn-md {
-  height: 40px;
-  padding: 10px 25px;
-}
-
-a.tc-btn-sm,
-.tc-btn-sm {
-  height: 30px;
-  padding: 5px 15px;
-}
-
-a.tc-btn-xs,
-.tc-btn-xs {
-  height: 20px;
-  padding: 3px 10px;
-}
+// Button States
 
 a.tc-btn-pressed,
 .tc-btn-pressed {
   box-shadow: 0px 1px 3px 0px $tc-gray-80;
 }
 
-a.tc-btn-primary,
+// Button Sizes
+
+a.tc-btn-lg,
+.tc-btn-lg {
+  height: 50px;
+  padding: 10px 30px;
+  @include tc-heading;
+}
+
+a.tc-btn-md,
+.tc-btn-md {
+  height: 40px;
+  padding: 10px 25px;
+  @include tc-label-lg;
+}
+
+a.tc-btn-sm,
+.tc-btn-sm {
+  height: 30px;
+  padding: 5px 15px;
+  @include tc-label-md;
+}
+
+a.tc-btn-xs,
+.tc-btn-xs {
+  height: 20px;
+  padding: 3px 10px;
+  @include tc-label-sm;
+}
+
+// Button Types
+
+@mixin button-transition {
+  transition: background 0.5s;
+}
+
 .tc-btn-primary {
   background-color: $tc-dark-blue-90;
+  @include background-gradient($tc-dark-blue-90, $tc-dark-blue-90);
   color: $tc-gray-neutral-light;
   border: 1px solid $tc-dark-blue;
+  @include button-transition;
+
+  &:hover {
+    color: $tc-gray-neutral-light;
+    @include background-gradient($tc-dark-blue-90, $tc-dark-blue);
+  }
+
+  &:active {
+    color: $tc-gray-neutral-light;
+    @include background-gradient($tc-dark-blue, $tc-dark-blue-90);
+  }
 }
 
-a.tc-btn-primary:hover,
-.tc-btn-primary:hover {
-  color: $tc-gray-neutral-light;
-  @include background(linear-gradient($tc-dark-blue-90, $tc-dark-blue) left repeat);
-}
 
-a.tc-btn-primary:active,
-.tc-btn-primary:active {
-  color: $tc-gray-neutral-light;
-  @include background(linear-gradient($tc-dark-blue, $tc-dark-blue-90) left repeat);
-}
-
-a.tc-btn-secondary,
 .tc-btn-secondary {
   background-color: $tc-gray-40;
   color: $tc-gray-neutral-light;
   border: 1px solid $tc-gray-50;
-}
+  @include button-transition;
 
-a.tc-btn-secondary:hover,
-.tc-btn-secondary:hover {
-  color: $tc-gray-neutral-light;
-  @include background(linear-gradient($tc-gray-40, $tc-gray-50) left repeat);
-}
+  &:hover {
+    color: $tc-gray-neutral-light;
+    @include background-gradient($tc-gray-40, $tc-gray-50);
+  }
 
-a.tc-btn-secondary:active,
-.tc-btn-secondary:active {
-  color: $tc-gray-neutral-light;
-  @include background(linear-gradient($tc-gray-50, $tc-gray-40) left repeat);
+  &:active {
+    color: $tc-gray-neutral-light;
+    @include background-gradient($tc-gray-50, $tc-gray-40);
+  }
 }
 
 a.tc-btn-default,
