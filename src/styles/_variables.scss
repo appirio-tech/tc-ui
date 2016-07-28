@@ -8,6 +8,7 @@
 
 // Base
 $base-unit: 5px;
+$corner-radius: 2px;
 
 // Colors
 //
@@ -78,26 +79,26 @@ $tc-level-5: #E6175C;
 // Label, body, and heading font sizes
 
 // Labels
-$tc-label-large      : 15px;
-$tc-label            : 13px;
-$tc-label-small      : 12px;
-$tc-label-extra-small: 11px;
+$tc-label-lg			: 15px;
+$tc-label-md          	: 13px;
+$tc-label-sm			: 12px;
+$tc-label-xs			: 11px;
 
 // Body
-$tc-body-large      : 20px;
-$tc-body            : 16px;
-$tc-body-small      : 14px;
-$tc-body-extra-small: 12px;
+$tc-body-large     		: 20px;
+$tc-body            	: 16px;
+$tc-body-small      	: 14px;
+$tc-body-extra-small	: 12px;
 
 // Headings
-$tc-heading-extra-large: 42px;
-$tc-heading-large      : 28px;
-$tc-heading            : 20px;
-$tc-heading-small      : 16px;
-$tc-heading-extra-small: 14px;
+$tc-heading-extra-large	: 42px;
+$tc-heading-large      	: 28px;
+$tc-heading            	: 20px;
+$tc-heading-small      	: 16px;
+$tc-heading-extra-small	: 14px;
 
 // breakpoints
-$screen-lg : 1376px;
-$screen-md : 768px;
-$screen-sm : 640px;
-$screen-xs : 320px;
+$screen-lg 				: 1376px;
+$screen-md 				: 768px;
+$screen-sm 				: 640px;
+$screen-xs 				: 320px;

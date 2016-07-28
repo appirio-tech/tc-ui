@@ -1,7 +1,10 @@
-@import 'reset';
 @import 'tc-includes';
-@import 'typography';
+@import 'reset';
+
+// Use to list all modules to include
 @import 'buttons';
+@import 'forms';
+@import 'typography';
 
 // App level resets
 html {
@@ -28,55 +31,57 @@ a {
   }
 }
 
+
+
 .flex {
-  @include display(flex);
+  display: flex;
 
   &.column {
-    @include flex-direction(column);
+    flex-direction: column;
   }
 
   &.center {
-    @include justify-content(center);
+    justify-content: center;
   }
 
   &.end {
-    @include justify-content(flex-end);
+    justify-content: flex-end;
   }
 
   &.space-between {
-    @include justify-content(space-between);
+    justify-content: space-between;
   }
 
   &.space-around {
-    @include justify-content(space-around);
+    justify-content: space-around;
   }
 
   &.middle {
-    @include align-items(center);
+    align-items: center;
   }
 
   &.stretch {
-    @include align-items(stretch);
+    align-items: stretch;
   }
 
   &.bottom {
-    @include align-items(flex-end);
+    align-items: flex-end;
   }
 
   &.wrap {
-    @include flex-wrap(wrap);
+    flex-wrap: wrap;
   }
 }
 
 .flex-grow {
-  @include flex-grow(1);
+  flex-grow: 1;
 }
 
 .flex-one {
-  @include flex(1);
+  flex: 1;
 }
 
 .flex-shrink {
-  @include flex-shrink(1);
-  @include flex-basis(100px);
+  flex-shrink: 1;
+  flex-basis: 100px;
 }
