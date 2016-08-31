@@ -128,3 +128,15 @@ a.tc-btn-warning,
   color: $tc-gray-neutral-light;
   border: 1px solid $tc-red;
 }
+
+button[disabled],
+a.tc-btn[disabled],
+button[disabled]:hover,
+a.tc-btn[disabled]:hover,
+button[disabled]:active,
+a.tc-btn[disabled]:active {
+  background-color: $tc-gray-10;
+  border: none;
+  cursor: default;
+  color: $tc-white;
+}
