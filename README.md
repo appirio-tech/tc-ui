@@ -1,18 +1,19 @@
 #### Dev [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=dev)](https://travis-ci.org/appirio-tech/tc-ui) QA [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=qa)](https://travis-ci.org/appirio-tech/tc-ui) Master [![Build Status](https://travis-ci.org/appirio-tech/tc-ui.svg?branch=master)](https://travis-ci.org/appirio-tech/tc-ui)
 
-# Topcoder UI Kit
+# Topcoder UI Styles Kit
+#### Version 2.0.10
 
-This repo houses Topcoder's style guide and component library. Design documentation and information on the style guide principles can be found at https://app.frontify.com/d/zEXqGHFD1YN2/ui-library.
+This repo houses Topcoder's SASS style kit. Design documentation and information on the style guide principles can be found at [Topcoder Platform page](https://topcoder-platform.github.io).
 
-The technologies used are React, Redux, ES2015, Webpack, and SCSS.
+The technologies used are React, Redux, ES6, Webpack, and SCSS.
 
 ## Installation
 
-We use node 5.x and npm 3.x, so you may need to download a new version of node. The easiest way is to download [nvm](https://github.com/creationix/nvm). We have a `.nvmrc` file in the root of the project, so you can just run `nvm use` to switch to the correct version of node.
+We use node 8.x and npm 5.x, so you may need to download a new version of node. The easiest way is to download [nvm](https://github.com/creationix/nvm). We have a `.nvmrc` file in the root of the project, so you can just run `nvm use` to switch to the correct version of node.
 
 Install dependencies by running the following in the root of the project:
  - `npm i`
- - **Note:** You must use npm 3. Type `npm -v` to ensure you have a 3.x version.
+ - **Note:** You must use npm 5. Type `npm -v` to ensure you have a 5.x version.
 
 ## NPM Commands
 - To run locally, run `npm start` and head to `localhost:8080`

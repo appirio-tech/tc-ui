@@ -1,8 +1,14 @@
 {
   "name": "tc-ui",
-  "version": "0.0.0",
+  "version": "2.0.10",
+  "description": "Topcoder UI Style Kit in SASS for use in apps and react components",
+  "keywords": "Topcoder, UI Kit, React components, Connect",
+  "homepage": "https://github.com/appirio-tech/tc-ui/tree/feature/connectv2",
+  "bugs": {
+    "url": "https://github.com/appirio-tech/tc-ui/issues",
+    "email": "devops@topcoder.com"
+  },
   "main": "exports.js",
-  "description": "Topcoder UI components and style guide",
   "devDependencies": {
     "appirio-tech-webpack-config": "0.x.x",
     "babel-core": "^6.6.5",
