@@ -24,12 +24,17 @@ a.tc-link:hover,
   color: $tc-dark-blue;
   text-decoration: none;
 }
-
+a.tc-btn {
+  display: inline-block;
+}
 .tc-btn {
   @include roboto;
-  border-radius: $corner-radius;
+  padding: 0 20px;
+  border-radius: 2 * $corner-radius;
   cursor: pointer;
   user-select:none;
+  border-width: 1px;
+  border-style: solid;
 
   &:focus {
     outline: none;
@@ -47,30 +52,26 @@ a.tc-btn-pressed,
 
 a.tc-btn-lg,
 .tc-btn-lg {
-  height: 50px;
-  padding: 10px 30px;
-  @include tc-heading;
+  @extend .size-lg;
+  padding: 0 30px;
 }
 
 a.tc-btn-md,
 .tc-btn-md {
-  height: 40px;
-  padding: 10px 25px;
-  @include tc-label-lg;
+  @extend .size-md;
+  padding: 0 25px;
 }
 
 a.tc-btn-sm,
 .tc-btn-sm {
-  height: 30px;
-  padding: 5px 15px;
-  @include tc-label-md;
+  @extend .size-sm;
+  padding: 0 15px;
 }
 
 a.tc-btn-xs,
 .tc-btn-xs {
-  height: 20px;
-  padding: 3px 10px;
-  @include tc-label-sm;
+  @extend .size-xs;
+  padding: 0 10px;
 }
 
 // Button Types
@@ -79,54 +80,85 @@ a.tc-btn-xs,
   transition: background 0.5s;
 }
 
+a.tc-btn-primary,
 .tc-btn-primary {
-  background-color: $tc-dark-blue-90;
-  @include background-gradient($tc-dark-blue-90, $tc-dark-blue-90);
-  color: $tc-gray-neutral-light;
-  border: 1px solid $tc-dark-blue;
-  @include button-transition;
-
-  &:hover {
-    color: $tc-gray-neutral-light;
-    @include background-gradient($tc-dark-blue-90, $tc-dark-blue);
+  background: $tc-dark-blue-90;
+  border-color: $tc-dark-blue-90;
+  color: $tc-white;
+  &:hover:enabled {
+    @include background-gradient(#3996FF, #127BF3);
   }
-
-  &:active {
-    color: $tc-gray-neutral-light;
-    @include background-gradient($tc-dark-blue, $tc-dark-blue-90);
+  &:active:enabled {
+    background: $tc-dark-blue-90;
+    box-shadow: inset 0 1px 3px 0 rgba($tc-gray-80, 0.50);
+  }
+  &.loading:enabled,
+  &:focus:not(:disabled) {
+    background: $tc-dark-blue-90;
+    border-color: $tc-dark-blue;
+    box-shadow: 0 0 2px 1px $tc-dark-blue-70;
   }
 }
 
-
+a.tc-btn-secondary,
 .tc-btn-secondary {
-  background-color: $tc-gray-40;
-  color: $tc-gray-neutral-light;
-  border: 1px solid $tc-gray-50;
-  @include button-transition;
-
-  &:hover {
-    color: $tc-gray-neutral-light;
+  background: $tc-gray-40;
+  border-color: $tc-gray-40;
+  color: $tc-white;
+  &:hover:enabled {
     @include background-gradient($tc-gray-40, $tc-gray-50);
   }
-
-  &:active {
-    color: $tc-gray-neutral-light;
-    @include background-gradient($tc-gray-50, $tc-gray-40);
+  &:active:enabled {
+    background: $tc-gray-50;
+    box-shadow: inset 0 1px 3px 0 rgba($tc-gray-80, 0.38);
+  }
+  &.loading:enabled,
+  &:focus:not(:disabled) {
+    background: $tc-gray-40;
+    border-color: $tc-gray-50;
+    box-shadow: 0 0 2px 1px $tc-dark-blue-70;
   }
 }
 
 a.tc-btn-default,
 .tc-btn-default {
-  background-color: white;
+  background: $tc-white;
+  border-color: $tc-gray-50;
   color: $tc-gray-70;
-  border: 1px solid $tc-gray-50;
+  &.loading:enabled,
+  &:focus:not(:disabled) {
+    background: $tc-white;
+    border-color: $tc-dark-blue-70;
+    box-shadow: 0 0 2px 1px $tc-dark-blue-30;
+  }
+  &:active:enabled,
+  &:hover:enabled {
+    background-image: linear-gradient(0deg, #F5F5F5 0%, #FFFFFF 49%, #FFFFFF 100%);
+    border-color: $tc-gray-40;
+  }
+  &:active:not(:disabled) {
+    box-shadow: inset 0 1px 2px 0 rgba($tc-black, 0.20);
+  }
 }
 
 a.tc-btn-warning,
 .tc-btn-warning {
-  background-color: $tc-red-70;
-  color: $tc-gray-neutral-light;
-  border: 1px solid $tc-red;
+  background: $tc-red-70 ;
+  border-color: $tc-red-70 ;
+  color: $tc-white;
+  &:hover:enabled {
+    @include background-gradient($tc-red-70, $tc-red);
+  }
+  &:active:enabled {
+    background: $tc-red;
+    box-shadow: inset 0 1px 3px 0 rgba($tc-gray-80, 0.38);
+  }
+  &.loading:enabled,
+  &:focus:not(:disabled) {
+    background: $tc-red-70 ;
+    border-color: $tc-red;
+    box-shadow: 0 0 2px 1px $tc-red-30;
+  }
 }
 
 button[disabled],
@@ -135,8 +167,5 @@ button[disabled]:hover,
 a.tc-btn[disabled]:hover,
 button[disabled]:active,
 a.tc-btn[disabled]:active {
-  background-color: $tc-gray-10;
-  border: none;
-  cursor: default;
-  color: $tc-white;
+  opacity: 0.5;
 }

@@ -210,31 +210,32 @@ textarea,
 .topcoder-input,
 toggle-password > input[type='password'],
 toggle-password-with-tips > input[type='password']  {
-  height: 40px;
-  width: 100%;
-  font-size: 15px;
   @include roboto;
-  line-height: 20px;
-  color: $tc-gray-80;
-  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
   margin-bottom: 10px;
-  outline: none;
+  font-size: 15px;
+  color: $tc-gray-80;
   background: $tc-white;
   border: 1px solid $tc-gray-30;
-  box-shadow: inset 0px 0px 2px 0px rgba(183, 183, 183, 0.2);
-  border-radius: 2px;
+  border-radius: 2 * $corner-radius;
   cursor: auto;
+  outline: none;
 
-  &:hover {
-    border: 1px solid $tc-gray-80;
-    box-shadow: inset 0px 0px 2px 0px $tc-gray-30;
+  &:hover:not(.error) {
+    border-color: $tc-gray-50;
   }
 
-  &:focus,
+  &:focus:not(.error),
   &.focus {
-    border: 1px solid $tc-dark-blue-90;
-    outline: none;
-    box-shadow: inset 0px 0px 2px 1px rgba(133,203,255,0.4);
+    border-color: $tc-dark-blue-70;
+    box-shadow: 0 0 2px 1px $tc-dark-blue-30;
+  }
+
+  &.error {
+    border-color: $tc-red-70;
   }
 
   &:disabled {
@@ -243,8 +244,22 @@ toggle-password-with-tips > input[type='password']  {
     box-shadow: none;
   }
 
+  &.input-xs {
+    @extend .size-xs;
+  }
+  &.input-sm {
+    @extend .size-sm;
+  }
+  &.input-md {
+    @extend .size-md;
+  }
+  &.input-lg {
+    @extend .size-lg;
+  }
+
   transition: .15s all;
 }
+
 
 // Style the placeholders
 input {
