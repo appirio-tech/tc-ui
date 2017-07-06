@@ -29,13 +29,13 @@ a.tc-btn {
 }
 .tc-btn {
   @include roboto;
+  @extend .size-sm; 
   padding: 0 20px;
   border-radius: 2 * $corner-radius;
   cursor: pointer;
   user-select:none;
   border-width: 1px;
   border-style: solid;
-
   &:focus {
     outline: none;
   }
@@ -158,6 +158,37 @@ a.tc-btn-warning,
     background: $tc-red-70 ;
     border-color: $tc-red;
     box-shadow: 0 0 2px 1px $tc-red-30;
+  }
+}
+
+a.tc-btn-link,
+.tc-btn-link {
+  @include roboto-medium;
+  border-color: transparent;
+  background: transparent;
+  color: $tc-dark-blue;
+  line-height: 29px;
+
+  &:hover:enabled  {
+    color: $tc-dark-blue-70;
+  }
+  &:active:enabled  {
+    color: $tc-dark-blue-90;
+  }
+  &.loading:enabled,
+  &:focus:not(:disabled) {
+    border-color: $tc-dark-blue-70;
+    box-shadow: 0 0 2px 1px $tc-dark-blue-30;
+  }
+  &:focus:not(:disabled) {
+    color: $tc-dark-blue;
+  }
+  &.loading:enabled {
+    color: $tc-gray-80; 
+  }
+  &[disabled],
+  &:disabled {
+    color: $tc-gray-80; 
   }
 }
 
