@@ -30,6 +30,8 @@ a.tc-btn {
 .tc-btn {
   @include roboto;
   @extend .size-sm; 
+  display: inline-flex;
+  align-items: center;
   padding: 0 20px;
   border-radius: 2 * $corner-radius;
   cursor: pointer;
@@ -167,7 +169,6 @@ a.tc-btn-link,
   border-color: transparent;
   background: transparent;
   color: $tc-dark-blue;
-  line-height: 29px;
 
   &:hover:enabled  {
     color: $tc-dark-blue-70;
