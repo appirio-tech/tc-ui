@@ -260,6 +260,14 @@ toggle-password-with-tips > input[type='password']  {
   transition: .15s all;
 }
 
+textarea:disabled {
+  border: 0;
+  background: none;
+  color: $tc-gray-80;
+  padding: 0;
+  resize: none !important;
+}
+
 
 // Style the placeholders
 input {
