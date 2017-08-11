@@ -239,9 +239,14 @@ toggle-password-with-tips > input[type='password']  {
   }
 
   &:disabled {
-    border: 1px solid $tc-gray-20;
-    background-color: $tc-gray-30;
+    border: 0;
+    background: $tc-gray-neutral-light;
     box-shadow: none;
+    color: $tc-gray-60;
+    // hack color for Safari
+    -webkit-text-fill-color: $tc-gray-50;
+    // hack font being lighter in Safari
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 
   &.input-xs {
@@ -258,14 +263,6 @@ toggle-password-with-tips > input[type='password']  {
   }
 
   transition: .15s all;
-}
-
-textarea:disabled {
-  border: 0;
-  background: none;
-  color: $tc-gray-80;
-  padding: 0;
-  resize: none !important;
 }
 
 
