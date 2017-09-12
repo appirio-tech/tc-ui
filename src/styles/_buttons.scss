@@ -173,10 +173,10 @@ a.tc-btn-secondary,
   @include roboto-medium;
   border-color: transparent;
   background: transparent;
-  color: $tc-dark-blue;
+  color: $tc-dark-blue-70;
 
   &:hover:enabled  {
-    color: $tc-dark-blue-70;
+    color: $tc-dark-blue;
   }
   &:active:enabled  {
     color: $tc-dark-blue-90;
@@ -187,7 +187,7 @@ a.tc-btn-secondary,
     box-shadow: 0 0 2px 1px $tc-dark-blue-30;
   }
   &:focus:enabled {
-    color: $tc-dark-blue;
+    color: $tc-dark-blue-70;
   }
   &.loading:enabled {
     color: $tc-gray-80; 
