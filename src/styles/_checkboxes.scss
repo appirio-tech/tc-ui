@@ -14,11 +14,9 @@ input[type=checkbox] {
 // TODO: Refactor to use parameters as the slider;
 // TODO: Create mixin for the 4 sizes - lg, md, sm, xs
 // 
-
-$checkbox-size                    : $base-unit * 4;
-$checkbox-bg-empty                : $tc-gray-neutral-light;
-$checkbox-bg-selected             : $tc-dark-blue-90;
-
+$checkbox-size: $base-unit * 4;
+$checkbox-bg-empty: $tc-gray-neutral-light;
+$checkbox-bg-selected: $tc-dark-blue-100;
 
 .tc-checkbox-label {
   display: inline-block;
@@ -42,7 +40,7 @@ $checkbox-bg-selected             : $tc-dark-blue-90;
   input[type=checkbox] {
     display: none;
   }
-  
+
   label {
     cursor: pointer;
     position: absolute;
@@ -56,7 +54,7 @@ $checkbox-bg-selected             : $tc-dark-blue-90;
     border: 1px solid $tc-gray-50;
     background: $tc-gray-neutral-light;
     transition: all .150s ease-in-out;
-    
+
     &:after {
       opacity: 0;
       content: '';
@@ -66,7 +64,7 @@ $checkbox-bg-selected             : $tc-dark-blue-90;
       background: transparent;
       top: 4px;
       left: 3px;
-      border: 3px solid $tc-dark-blue-90;
+      border: 3px solid $tc-dark-blue-100;
       border-top: none;
       border-right: none;
       transform: rotate(-45deg);
@@ -95,15 +93,14 @@ $checkbox-bg-selected             : $tc-dark-blue-90;
 // ----------------------------------------------------------------------
 // 
 // TODO: Create mixin and render the 4 sizes - lg, md, sm, xs
-
-$slider-height                 : $base-unit * 5;
-$slider-handle-offset          : 3px;
-$slider-width                  : $slider-height * 2 - ($slider-handle-offset * 2); 
-$slider-handle-size            : $slider-height - (2 * $slider-handle-offset);
-$slider-speed                  : 150ms;
-$slider-off-bg                 : $tc-gray-40;
-$slider-on-bg                  : $tc-dark-blue-90;
-$slider-handle-color           : $tc-white;
+$slider-height: $base-unit * 5;
+$slider-handle-offset: 3px;
+$slider-width: $slider-height * 2 - ($slider-handle-offset * 2);
+$slider-handle-size: $slider-height - (2 * $slider-handle-offset);
+$slider-speed: 150ms;
+$slider-off-bg: $tc-gray-40;
+$slider-on-bg: $tc-dark-blue-100;
+$slider-handle-color: $tc-white;
 
 .tc-slider-label {
   display: inline-block;
@@ -122,8 +119,7 @@ $slider-handle-color           : $tc-white;
   display: inline-block;
 
   input[type=checkbox]:focus ~ label {
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.40),
-                      1px 1px 1px rgba(255, 255, 255, 0.60);
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.40), 1px 1px 1px rgba(255, 255, 255, 0.60);
     background: $slider-off-bg;
   }
 
@@ -137,7 +133,7 @@ $slider-handle-color           : $tc-white;
 
   label {
     border-radius: $slider-height / 2;
-    box-shadow: inset 0px 1px 2px 0px rgba(38,38,40,0.30);
+    box-shadow: inset 0px 1px 2px 0px rgba(38, 38, 40, 0.30);
     height: $slider-height;
     width: $slider-width;
     position: absolute;
@@ -179,6 +175,7 @@ $slider-handle-color           : $tc-white;
 // TODO: Refactor to use parameters like the Slider
 .radio {
   margin: 0;
+
   input[type="radio"] {
     opacity: 0;
     display: none;
@@ -190,9 +187,10 @@ $slider-handle-color           : $tc-white;
     padding-left: 26px;
     position: relative;
     @include tc-label-md;
-    font-size:14px;
+    font-size: 14px;
     color: $tc-black;
     margin-right: 30px;
+
     &:before {
       border: 1px solid $tc-gray-20;
       border-radius: 50%;
@@ -208,7 +206,7 @@ $slider-handle-color           : $tc-white;
   }
 
   input[type="radio"]:checked + label:after {
-    background: $tc-dark-blue-90;
+    background: $tc-dark-blue-100;
     border-radius: 50%;
     content: "";
     display: inline-block;

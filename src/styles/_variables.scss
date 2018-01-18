@@ -14,15 +14,8 @@
 $base-unit: 5px;
 $corner-radius: 2px;
 
-// Colors
-// 
-// Primary Brand
-$tc-light-blue: #26ade9;
-$tc-dark-blue: #0b71e6;
-$tc-green: #60c700;
-$tc-orange: #fb7d22;
-$tc-yellow: #fff100; // unused
-
+// COLOR PALETTE
+//
 // Grayscale colors
 $tc-black: #262628;
 $tc-gray-90: #37373c;
@@ -39,67 +32,91 @@ $tc-gray-neutral-light: #fafafb;
 $tc-white: #ffffff;
 
 // Accents & Shades
-$tc-dark-blue: $tc-dark-blue;
-$tc-dark-blue-90: #1a85ff;
-$tc-dark-blue-70: #59a7ff;
-$tc-dark-blue-30: #cfe6ff;
+$tc-dark-blue-110: #006dea;
+$tc-dark-blue-100: #0681ff;
+$tc-dark-blue-70: #55a5ff;
+$tc-dark-blue-30: #cee6ff;
 $tc-dark-blue-10: #f4f9ff;
 
 // Light Blue - design color code
-$tc-light-blue-110: #169ed9; // optically corrected for text
-$tc-light-blue: $tc-light-blue;
+$tc-light-blue-110: #169ed9;
+$tc-light-blue-100: #26ade9;
 $tc-light-blue-70: #67c5ef;
 $tc-light-blue-30: #bde6f8;
 $tc-light-blue-10: #e9f6fc;
 
 // Warm Orange - data science color code
-$tc-orange-110: #f26500; // optically corrected for text
-$tc-orange: $tc-orange;
+$tc-orange-110: #f26500;
+$tc-orange-100: #fb7d22;
 $tc-orange-70: #fda464;
 $tc-orange-30: #fee3d0;
 $tc-orange-10: #fff0eb;
 
 // Red - used for warnings
-$tc-red: #f22f24;
+$tc-red-110: #ea1900;
+$tc-red-100: #f22f24;
 $tc-red-70: #ff5b52;
 $tc-red-30: #ffd4d1;
 $tc-red-10: #fff4f4;
 
-// Golds represent first prize
-$tc-gold: #fce217;
-$tc-gold-70: #faed8e;
-$tc-gold-30: #fff7cc;
-$tc-gold-10: #fffde6;
+// Yellow
+$tc-yellow-110: #f2c900;
+$tc-yellow-100: #fde400;
+$tc-yellow-70: #fbee88;
+$tc-yellow-30: #fff8ca;
+$tc-yellow-10: #fffde5;
 
 // Greens - development color code
-$tc-green-110: #55b000; // optically corrected for text
-$tc-green: $tc-green;
+$tc-green-110: #55b000;
+$tc-green-100: #60c700;
 $tc-green-70: #96d957;
 $tc-green-30: #cfefb2;
 $tc-green-10: #effae5;
 
 // Purples
-$tc-purple: #9050a3;
+$tc-purple-110: #9050a3;
+$tc-purple-100: #9050a3;
 $tc-purple-70: #b47dd6;
 $tc-purple-30: #e2c7f2;
 $tc-purple-10: #f8f2fb;
 
-// Badges
-$tc-gold: $tc-gold;
+// TC Metal colors - Badges
+$tc-gold: #fce217;
 $tc-silver: #94bef5;
 $tc-bronze: #bd731e;
 
-// Levels
-$tc-level-1: $tc-gray-40;
-$tc-level-2: #25c089;
-$tc-level-3: #666eff;
-$tc-level-4: #fcb816;
-$tc-level-5: #e6175c;
+// Pastel colors, used for levels
+$tc-pastel-green: #25c089;
+$tc-pastel-blue: #666eff;
+$tc-pastel-yellow: #fcb816;
+$tc-pastel-crimson: #e6175c;
+
+
+// COLOR ALIASES
+
+// Brand colors
+$tc-dark-blue: $tc-dark-blue-100;
+$tc-light-blue: $tc-light-blue-100;
+$tc-green: $tc-green-100;
+$tc-purple: $tc-purple-100;
+$tc-yellow: $tc-yellow-100;
+$tc-orange: $tc-orange-100;
+$tc-red: $tc-red-100;
+
+// Community achievement color codes
+$tc-level-1: $tc-gray-50;
+$tc-level-2: $tc-pastel-green;
+$tc-level-3: $tc-pastel-blue;
+$tc-level-4: $tc-pastel-yellow;
+$tc-level-5: $tc-pastel-crimson;
+
+// FIXME               : transfer all instances to darkblue 100
+$tc-dark-blue-90: $tc-dark-blue-100;
 
 // Typography
 //
 // Label, body, and heading font sizes The typographyc scale of the TC System
-// is                  : 11, 12, 13, 15, 20, 28, 42, 64, 72 using the variables below we provide a
+// is 11, 12, 13, 15, 20, 28, 42, 64, 72 using the variables below we provide a
 // systematic approach to your creative typography; also opens the possiblitiy
 // for fine adjustment and more typefaces used as the system evlovles.
 //
