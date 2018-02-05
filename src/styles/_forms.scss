@@ -1,433 +1,502 @@
-.tc-label {
-  display: block;
-  width: 100%;
-  margin-bottom: 5px;
-  padding-right: 5px;
-  @include roboto;
-  font-size: 12px;
-  color: $tc-gray-80;
-  text-transform: uppercase;
-}
-
-.tc-label__wrapper {
-  position: relative;
-}
-
-.tc-label__asterisk {
-  position: absolute;
-  top: -20px;
-  right: 5px;
-  @include roboto;
-  font-size: 10px;
-  color: $tc-red;
-  // Asterisk
-  span {
-    font-size: 16px;
-  }
-}
-
-// File input stylings
-.tc-file-field {
-  display: block;
-}
-
-.tc-file-field__label {
-  width: 500px;
-
-  label {
-    display: inline-block;
-  }
-}
-
-.tc-file-field__inputs {
-  display: flex;
-  flex-direction: row;
-  width: 500px;
-
-  div {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-right: 10px;
-  }
-
-  button {
-    flex: 1 0 auto;
-  }
-}
-
-// Textarea with label and optional character count
-.tc-textarea {
-  display: block;
-  max-width: 640px;
-
-  textarea {
-    width: 100%;
-    min-height: 92px;
+:global {
+  .tc-label {
     display: block;
-  }
-}
-
-.tc-textarea__char-count {
-  float: right;
-  @include roboto;
-  font-size: 11px;
-  color: $tc-gray-60;
-}
-
-.tc-textarea__char-count--current {
-  @include roboto;
-  color: $tc-gray-80;
-}
-
-// Error messages
-.tc-error-messages {
-  margin-bottom: 20px;
-  padding: 10px 7px;
-  border: 1px solid $tc-red-70;
-  background-color: $tc-red-30;
-  color: $tc-red;
-  @include roboto;
-  font-style: italic;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-}
-
-
-// Two column form blocks with descriptions/instructions
-.form-blocks {
-  width: 100%;
-}
-
-.form-block {
-  padding-bottom: 30px;
-  flex-direction: column;
-
-  @media screen and (min-width: 1000px) {
-    padding: 30px 0;
-    border-top: 1px solid $tc-gray-20;
-    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    @include roboto;
+    font-size: 12px;
+    color: $tc-gray-80;
+    text-transform: uppercase;
   }
 
-  &:first-child {
-    border-top: none;
+  .tc-label__wrapper {
+    position: relative;
   }
-}
 
-.form-block__instructions {
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $tc-gray-neutral-light;
-
-  @media screen and (min-width: 1000px) {
-    margin-bottom: 0;
-    padding-right: 33px;
-    flex: 1 0 auto;
-    max-width: 300px;
-    border-bottom: none;
-  }
-}
-
-.form-block__title {
-  margin-bottom: 14px;
-  @include roboto;
-  font-size: 16px;
-  color: $tc-gray-80;
-  text-transform: uppercase;
-}
-
-.form-block__text {
-  @include roboto;
-  font-size: 13px;
-  font-style: italic;
-  line-height: 20px;
-  color: $tc-gray-80;
-
-  p {
-    @media screen and (min-width: 1000px) {
-      margin-bottom: 15px;
+  .tc-label__asterisk {
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    @include roboto;
+    font-size: 10px;
+    color: $tc-red;
+    // Asterisk
+    span {
+      font-size: 16px;
     }
   }
-}
 
-.form-block__fields {
-  width: 100%;
-  border-bottom: 6px solid $tc-gray-20;
-
-  @media screen and (min-width: 1000px) {
-    width: 73%;
-    padding-left: 60px;
-    border-bottom: none;
-    border-left: 6px solid $tc-gray-20;
+  // File input stylings
+  .tc-file-field {
+    display: block;
   }
-}
 
-// Fieldsets: More than one fieldset
-// Fieldset: Multiple input groups
-.fieldsets {
-  width: 100%;
-  padding-bottom: 20px;
+  .tc-file-field__label {
+    width: 500px;
 
-  @media screen and (min-width: 1000px) {
-    padding-bottom: 0;
+    label {
+      display: inline-block;
+    }
+  }
+
+  .tc-file-field__inputs {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+
+    div {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-right: 10px;
+    }
+
+    button {
+      flex: 1 0 auto;
+    }
+  }
+
+  // Textarea with label and optional character count
+  .tc-textarea {
+    display: block;
+    max-width: 640px;
+
+    textarea {
+      width: 100%;
+      min-height: 92px;
+      display: block;
+    }
+  }
+
+  .tc-textarea__char-count {
+    float: right;
+    @include roboto;
+    font-size: 11px;
+    color: $tc-gray-60;
+  }
+
+  .tc-textarea__char-count--current {
+    @include roboto;
+    color: $tc-gray-80;
+  }
+
+  // Error messages
+  .tc-error-messages {
+    margin-bottom: 20px;
+    padding: 10px 7px;
+    border: 1px solid $tc-red-70;
+    background-color: $tc-red-30;
+    color: $tc-red;
+    @include roboto;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+
+  // Two column form blocks with descriptions/instructions
+  .form-blocks {
+    width: 100%;
+  }
+
+  .form-block {
+    padding-bottom: 30px;
+    flex-direction: column;
+
+    @media screen and (min-width: 1000px) {
+      padding: 30px 0;
+      border-top: 1px solid $tc-gray-20;
+      flex-direction: row;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .form-block__instructions {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $tc-gray-neutral-light;
+
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 0;
+      padding-right: 33px;
+      flex: 1 0 auto;
+      max-width: 300px;
+      border-bottom: none;
+    }
+  }
+
+  .form-block__title {
+    margin-bottom: 14px;
+    @include roboto;
+    font-size: 16px;
+    color: $tc-gray-80;
+    text-transform: uppercase;
+  }
+
+  .form-block__text {
+    @include roboto;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 20px;
+    color: $tc-gray-80;
+
+    p {
+      @media screen and (min-width: 1000px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .form-block__fields {
+    width: 100%;
+    border-bottom: 6px solid $tc-gray-20;
+
+    @media screen and (min-width: 1000px) {
+      width: 73%;
+      padding-left: 60px;
+      border-bottom: none;
+      border-left: 6px solid $tc-gray-20;
+    }
+  }
+
+  // Fieldsets: More than one fieldset
+  // Fieldset: Multiple input groups
+  .fieldsets {
+    width: 100%;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: 1000px) {
+      padding-bottom: 0;
+    }
+
+    .fieldset {
+      border-bottom: 1px solid $tc-gray-20;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
   }
 
   .fieldset {
-    border-bottom: 1px solid $tc-gray-20;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    @media screen and (min-width: 1000px) {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 0;
+    }
   }
-}
 
-.fieldset {
-  display: block;
-  width: 500px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-
-  @media screen and (min-width: 1000px) {
+  .fieldset__input {
     width: 100%;
-    margin: 0;
-    padding-bottom: 0;
-  }
-}
-
-.fieldset__input {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-}
-
-.fieldset__button {
-  display: block;
-
-  @media screen and (min-width: 1000px) {
-    margin-left: 0;
-  }
-}
-
-// Inputs before style guide
-// Topcoder Inputs
-//Empty state
-input:not([type="checkbox"]),
-textarea,
-.topcoder-input,
-toggle-password > input[type='password'],
-toggle-password-with-tips > input[type='password'] {
-  @include roboto;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 10px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: $tc-gray-80;
-  background: $tc-white;
-  border: 1px solid $tc-gray-30;
-  border-radius: 2 * $corner-radius;
-  cursor: auto;
-  outline: none;
-
-  &:hover:not(.error) {
-    border-color: $tc-gray-50;
+    max-width: 500px;
+    display: block;
   }
 
-  &:focus:not(.error),
-  &.focus {
-    border-color: $tc-dark-blue-70;
-    box-shadow: 0 0 2px 1px $tc-dark-blue-30;
+  .fieldset__button {
+    display: block;
+
+    @media screen and (min-width: 1000px) {
+      margin-left: 0;
+    }
   }
 
-  &.error {
-    border-color: $tc-red-70;
-  }
-
-  &:disabled {
-    border: 0;
-    background: $tc-gray-neutral-light;
-    box-shadow: none;
-    color: $tc-gray-60;
-    // hack color for Safari
-    -webkit-text-fill-color: $tc-gray-50;
-    // hack font being lighter in Safari
-    // -webkit-font-smoothing: subpixel-antialiased;
-  }
-
-  &.input-xs {
-    @extend .size-xs;
-  }
-
-  &.input-sm {
-    @extend .size-sm;
-  }
-
-  &.input-md {
-    @extend .size-md;
-  }
-
-  &.input-lg {
-    @extend .size-lg;
-  }
-  transition: .15s all;
-}
-
-textarea:disabled {
-  border: 0;
-  background: none;
-  color: $tc-gray-80;
-  padding: 0;
-}
-
-// Style the placeholders
-input {
-  @include placeholder {
+  // Inputs before style guide
+  // Topcoder Inputs
+  //Empty state
+  input:not([type="checkbox"]),
+  textarea,
+  .topcoder-input,
+  toggle-password > input[type='password'],
+  toggle-password-with-tips > input[type='password'] {
+    @include roboto;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
     color: $tc-gray-80;
-    font-size: 12px;
-    @include roboto;
-    text-transform: uppercase;
-    transition: opacity .15s;
-    opacity: 1;
-  }
-}
+    background: $tc-white;
+    border: 1px solid $tc-gray-30;
+    border-radius: 2 * $corner-radius;
+    cursor: auto;
+    outline: none;
 
-input:focus {
-  @include placeholder {
-    opacity: 0;
-    transition: opacity .15s;
-  }
-}
-
-/* text input themes -- start */
-.paper-form-dotted {
-  label {
-    display: none;//hides the empty label
-  }
-
-  input {
-    @include roboto;
-    border: none;
-    border-bottom: 1px dashed $tc-gray-20;
-    border-radius: 0;
-    box-shadow: none;
-    -ms-overflow-style: none;
-    font-size: $base-unit*3;
-    line-height: $base-unit*4;
-
-    &.empty {
-      background: $tc-gray-neutral-light;
-      border-bottom: 1px solid $tc-gray-40;
-      color: $tc-gray-30;
+    &:hover:not(.error) {
+      border-color: $tc-gray-50;
     }
 
-    @include placeholder {
-      @include roboto;
-      color: $tc-gray-30;
-      text-transform: none;
-      font-style: italic;
-      font-size: $base-unit*3;
-      line-height: $base-unit*4;
-    }
-
-    &:focus {
-      background: $tc-dark-blue-10 !important;
-      border: none;
-      border-bottom: 1px solid $tc-dark-blue-70;
-      box-shadow: none;
-      color: $tc-gray-80;
-    }
-
-    &:hover {
-      border: none;
-      border-bottom: 1px solid $tc-dark-blue-70;
-      box-shadow: none;
-    }
-
-    &:disabled {
-      background: $tc-gray-neutral-light;
-      border-bottom: 1px solid $tc-gray-40;
-      color: $tc-gray-30;
+    &:focus:not(.error),
+    &.focus {
+      border-color: $tc-dark-blue-70;
+      box-shadow: 0 0 2px 1px $tc-dark-blue-30;
     }
 
     &.error {
-      border: 1px solid $tc-red-70 !important;
-      background: $tc-gray-neutral-light !important;
+      border-color: $tc-red-70;
+    }
+
+    &:disabled {
+      border: 0;
+      background: $tc-gray-neutral-light;
+      box-shadow: none;
+      color: $tc-gray-60;
+      // hack color for Safari
+      -webkit-text-fill-color: $tc-gray-50;
+      // hack font being lighter in Safari
+      // -webkit-font-smoothing: subpixel-antialiased;
+    }
+    transition: .15s all;
+  }
+
+  textarea:disabled {
+    border: 0;
+    background: none;
+    color: $tc-gray-80;
+    padding: 0;
+  }
+
+  // Style the placeholders
+  input {
+    @include placeholder {
+      color: $tc-gray-80;
+      font-size: 12px;
+      @include roboto;
+      text-transform: uppercase;
+      transition: opacity .15s;
+      opacity: 1;
     }
   }
-}
 
-/* text input themes -- end */
-
-
-textarea {
-  padding: 10px;
-  line-height: 24px;
-
-  @include placeholder {
-    color: $tc-gray-80;
-    font-weight: 300;
-  }
-
-  &:focus {
+  input:focus {
     @include placeholder {
       opacity: 0;
       transition: opacity .15s;
     }
   }
-}
 
-// Compound fields, reset the input element and style the parent container to resemble input
-.topcoder-input,
-toggle-password,
-toggle-password-with-tips {
-  // Reset the input styles
-  input {
-    height: 20px;
-    border: none;
-    background: none;
-    box-shadow: none;
-    padding: none;
+  /* text input themes -- start */
+  .paper-form-dotted {
+    label {
+      display: none;//hides the empty label
+    }
 
-    &:hover,
-    &:focus,
-    &.focus {
+    input {
+      @include roboto;
       border: none;
+      border-bottom: 1px dashed $tc-gray-20;
+      border-radius: 0;
       box-shadow: none;
-      outline: none;
+      -ms-overflow-style: none;
+      font-size: $base-unit*3;
+      line-height: $base-unit*4;
+
+      &.empty {
+        background: $tc-gray-neutral-light;
+        border-bottom: 1px solid $tc-gray-40;
+        color: $tc-gray-30;
+      }
+
+      @include placeholder {
+        @include roboto;
+        color: $tc-gray-30;
+        text-transform: none;
+        font-style: italic;
+        font-size: $base-unit*3;
+        line-height: $base-unit*4;
+      }
+
+      &:focus {
+        background: $tc-dark-blue-10 !important;
+        border: none;
+        border-bottom: 1px solid $tc-dark-blue-70;
+        box-shadow: none;
+        color: $tc-gray-80;
+      }
+
+      &:hover {
+        border: none;
+        border-bottom: 1px solid $tc-dark-blue-70;
+        box-shadow: none;
+      }
+
+      &:disabled {
+        background: $tc-gray-neutral-light;
+        border-bottom: 1px solid $tc-gray-40;
+        color: $tc-gray-30;
+      }
+
+      &.error {
+        border: 1px solid $tc-red-70 !important;
+        background: $tc-gray-neutral-light !important;
+      }
     }
   }
 
-  label {
-    display: inline-block;
-    text-transform: uppercase;
-    @include roboto-medium;
-    font-size: 10px;
-    line-height: 10px;
-    color: $tc-gray-80;
-    height: 20px;
-    width: 60px;
-    padding: 0;
+  /* text input themes -- end */
 
-    input[type='checkbox'] {
-      height: 14px;
-      width: 14px;
+
+  textarea {
+    padding: 10px;
+    line-height: 24px;
+
+    @include placeholder {
+      color: $tc-gray-80;
+      font-weight: 300;
+    }
+
+    &:focus {
+      @include placeholder {
+        opacity: 0;
+        transition: opacity .15s;
+      }
+    }
+  }
+
+  // Compound fields, reset the input element and style the parent container to resemble input
+  .topcoder-input,
+  toggle-password,
+  toggle-password-with-tips {
+    // Reset the input styles
+    input {
+      height: 20px;
+      border: none;
+      background: none;
+      box-shadow: none;
+      padding: none;
+
+      &:hover,
+      &:focus,
+      &.focus {
+        border: none;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+    label {
+      display: inline-block;
+      text-transform: uppercase;
+      @include roboto-medium;
+      font-size: 10px;
+      line-height: 10px;
+      color: $tc-gray-80;
+      height: 20px;
+      width: 60px;
+      padding: 0;
+
+      input[type='checkbox'] {
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+
+  // Custom Inputs
+  //
+  .input-sticky-placeholder-container {
+    position: relative;
+
+    span.placeholder-text {
+      position: absolute;
+      top: 14px;
+      right: 10px;
+      @include roboto-light;
+      font-size: 10px;
+      line-height: 10px;
+      text-transform: uppercase;
+      color: $tc-gray-80;
     }
   }
 }
 
-// Custom Inputs
-//
-.input-sticky-placeholder-container {
-  position: relative;
+// we have to apply :global one by one
+// as scss preprocessor's @extend is not fully compatible with :globbal directive
+// see https://github.com/css-modules/css-modules/issues/39
+:global(input:not([type="checkbox"]).input-xs) {
+  @extend .size-xs;
+}
 
-  span.placeholder-text {
-    position: absolute;
-    top: 14px;
-    right: 10px;
-    @include roboto-light;
-    font-size: 10px;
-    line-height: 10px;
-    text-transform: uppercase;
-    color: $tc-gray-80;
-  }
+:global(input:not([type="checkbox"]).input-sm) {
+  @extend .size-sm;
+}
+
+:global(input:not([type="checkbox"]).input-md) {
+  @extend .size-md;
+}
+
+:global(input:not([type="checkbox"]).input-lg) {
+  @extend .size-lg;
+}
+
+:global(textarea.input-xs) {
+  @extend .size-xs;
+}
+
+:global(textarea.input-sm) {
+  @extend .size-sm;
+}
+
+:global(textarea.input-md) {
+  @extend .size-md;
+}
+
+:global(textarea.input-lg) {
+  @extend .size-lg;
+}
+
+:global(.topcoder-input.input-xs) {
+  @extend .size-xs;
+}
+
+:global(.topcoder-input.input-sm) {
+  @extend .size-sm;
+}
+
+:global(.topcoder-input.input-md) {
+  @extend .size-md;
+}
+
+:global(.topcoder-input.input-lg) {
+  @extend .size-lg;
+}
+
+:global(toggle-password.input-xs) {
+  @extend .size-xs;
+}
+
+:global(toggle-password.input-sm) {
+  @extend .size-sm;
+}
+
+:global(toggle-password.input-md) {
+  @extend .size-md;
+}
+
+:global(toggle-password.input-lg) {
+  @extend .size-lg;
+}
+
+:global(toggle-password-with-tips.input-xs) {
+  @extend .size-xs;
+}
+
+:global(toggle-password-with-tips.input-sm) {
+  @extend .size-sm;
+}
+
+:global(toggle-password-with-tips.input-md) {
+  @extend .size-md;
+}
+
+:global(toggle-password-with-tips.input-lg) {
+  @extend .size-lg;
 }
