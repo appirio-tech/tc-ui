@@ -80,10 +80,16 @@ $tc-purple-70: #b47dd6;
 $tc-purple-30: #e2c7f2;
 $tc-purple-10: #f8f2fb;
 
-// TC Metal colors - Badges
-$tc-gold: #fce217;
-$tc-silver: #94bef5;
-$tc-bronze: #bd731e;
+// TC Metal colors - Badges and medals
+$tc-gold-100: #ffd84d;
+$tc-gold-110: #c99014;
+$tc-gold-130: #865e07;
+$tc-silver-100: #d1d0cf;
+$tc-silver-110: #716d67;
+$tc-silver-130: #554e48;
+$tc-bronze-100: #d98f64;
+$tc-bronze-110: #854e29;
+$tc-bronze-130: #733d17;
 
 // Pastel colors, used for levels
 $tc-pastel-green: #25c089;
@@ -109,6 +115,11 @@ $tc-level-2: $tc-pastel-green;
 $tc-level-3: $tc-pastel-blue;
 $tc-level-4: $tc-pastel-yellow;
 $tc-level-5: $tc-pastel-crimson;
+
+// Metal colors:
+$tc-gold: $tc-gold-100;
+$tc-silver: $tc-silver-100;
+$tc-bronze: $tc-bronze-100;
 
 // FIXME: transfer all instances to darkblue 100
 $tc-dark-blue-90: $tc-dark-blue-100;
