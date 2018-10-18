@@ -1,0 +1,27 @@
+// Sizes which were moved here from mixins/_utils.scss
+// because they shouldn't be included in _tc-includes.scss
+// NOTE I didn't find any application which uses these classes
+
+.size-xs {
+	height: 20px;
+	line-height: 18px;
+	font-size: 12px;
+}
+
+.size-sm {
+	height: 30px;
+	line-height: 28px;
+	font-size: 13px;
+}
+
+.size-md {
+	height: 40px;
+	line-height: 38px;
+	font-size: 15px;
+}
+
+.size-lg {
+	height: 50px;
+	line-height: 48px;
+	font-size: 20px;
+}
