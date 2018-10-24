@@ -17,20 +17,20 @@ $corner-radius: 2px;
 // COLOR PALETTE
 //
 // Grayscale colors
-$tc-black: #151516;
-$tc-gray-90: #2A2A2B;
+$tc-gray-100: #151516;
+$tc-gray-90: #2a2a2b;
 $tc-gray-80: #404041;
 $tc-gray-70: #555555;
-$tc-gray-60: #6B6B6B;
+$tc-gray-60: #6b6b6b;
 $tc-gray-50: #808080;
 $tc-gray-40: #959596;
-$tc-gray-30: #AAAAAB;
-$tc-gray-20: #C0C0C0;
-$tc-gray-10: #D5D5D5;
-$tc-gray-05: #E0E0E0; // new
+$tc-gray-30: #aaaaab;
+$tc-gray-20: #c0c0c0;
+$tc-gray-10: #d5d5d5;
+$tc-gray-05: #e0e0e0;
+$tc-gray-0: #ffffff;
 $tc-gray-neutral-dark: #ebebeb;
 $tc-gray-neutral-light: #fafafb;
-$tc-white: #ffffff;
 
 // Accents & Shades
 $tc-dark-blue-110: #006dea;
@@ -98,6 +98,11 @@ $tc-pastel-blue: #666eff;
 $tc-pastel-yellow: #fcb816;
 $tc-pastel-crimson: #e6175c;
 
+// Umber - new
+$tc-umber-light: #f1f0f0;
+$tc-umber: #d7d3d0;
+$tc-umber-dark: #a0958c;
+
 
 // COLOR ALIASES
 
@@ -109,6 +114,8 @@ $tc-purple: $tc-purple-100;
 $tc-yellow: $tc-yellow-100;
 $tc-orange: $tc-orange-100;
 $tc-red: $tc-red-100;
+$tc-black: $tc-gray-100;
+$tc-white: $tc-gray-000;
 
 // Community achievement color codes
 $tc-level-1: $tc-gray-50;
