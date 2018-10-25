@@ -124,12 +124,12 @@ $tc-level-3: $tc-pastel-blue;
 $tc-level-4: $tc-pastel-yellow;
 $tc-level-5: $tc-pastel-crimson;
 
-// Metal colors:
+// Metal colors
 $tc-gold: $tc-gold-100;
 $tc-silver: $tc-silver-100;
 $tc-bronze: $tc-bronze-100;
 
-// FIXME: transfer all instances to darkblue 100
+// FIXME transfer all instances to darkblue 100
 $tc-dark-blue-90: $tc-dark-blue-100;
 $tc-gold-70: $tc-yellow-70;
 $tc-gold-30: $tc-yellow-30;
@@ -143,24 +143,25 @@ $tc-gold-10: $tc-yellow-10;
 // for fine adjustment and more typefaces used as the system evlovles.
 //
 
-// Labels
-$tc-label-lg: 15px;
-$tc-label-md: 13px;
-$tc-label-sm: 12px;
-$tc-label-xs: 11px;
+// Headings
+$tc-heading-xl: 44px;
+$tc-heading-lg: 36px;
+$tc-heading-md: 28px;
+$tc-heading-sm: 20px;
+$tc-heading-xs: 15px;
 
 // Body
-$tc-body-lg: 20px;
-$tc-body-md: $tc-label-lg; // 15
-$tc-body-sm: $tc-label-md; // 13
-$tc-body-xs: $tc-label-xs; // 11
+$tc-body-lg: $tc-heading-sm; // 20
+$tc-body-md: $tc-heading-xs; // 15
+$tc-body-sm: 13px;
+$tc-body-xs: 11px;
 
-// Headings
-$tc-heading-xl: 42px;
-$tc-heading-lg: 28px;
-$tc-heading-md: $tc-body-lg;
-$tc-heading-sm: $tc-body-md;
-$tc-heading-xs: $tc-body-sm;
+// Labels
+$tc-label-lg: $tc-body-md; // 15
+$tc-label-md: $tc-body-sm; // 13
+$tc-label-sm: 12px;
+$tc-label-xs: $tc-body-xs; // 11
+$tc-label-xxs: 10px; // new - to support smallest text
 
 // breakpoints
 $screen-lg: 1360px;
